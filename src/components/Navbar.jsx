@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <div className="flex items-center"><Link to="/" className="flex-shrink-0 relative z-20 hover:opacity-90 transition-opacity">
-          <img src={gemsLogo} alt="Gems Educare" className="h-12 md:h-16 w-auto object-contain" />
+          <img src={gemsLogo} alt="Gems Educare" className="h-14 sm:h-16 md:h-[72px] w-auto object-contain" />
         </Link></div>
 
         {/* Desktop Links */}

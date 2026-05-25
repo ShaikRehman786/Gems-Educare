@@ -99,7 +99,7 @@ const Home = () => {
               { num: '5000+', label: 'Students Enrolled' },
               { num: '4.5+1 Yr', label: 'Course Duration' },
               { num: '7+', label: 'Accreditations' },
-              { num: '₹18L', label: 'Approx Total Cost' },
+              { num: '₹16L', label: 'Approx Total Cost' },
             ].map((stat, idx) => (
               <div key={idx} className="space-y-2">
                 <div className="text-4xl md:text-5xl font-bold text-primary font-playfair">{stat.num}</div>
@@ -154,6 +154,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">India vs Kyrgyzstan</h2>
           </div>
           <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
+            <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead className="bg-primary text-white">
                 <tr className="border-b border-border">
@@ -165,10 +166,10 @@ const Home = () => {
               <tbody className="text-text-primary">
                 {[
                   { label: 'Total Course Duration', india: '5.6 Years', kyg: '5.6 Years' },
-                  { label: 'Total College Fees', india: '₹70–90 Lakhs', kyg: '₹15–17 Lakhs' },
+                  { label: 'Total College Fees', india: '₹70–90 Lakhs', kyg: '₹16 Lakhs' },
                   { label: 'Exit Test (NEXT/NMC)', india: 'Yes', kyg: 'Yes' },
                   { label: 'MCI/WHO/FAIMER Listed', india: 'Yes', kyg: 'Yes' },
-                  { label: 'Total Cost (Approx)', india: '₹1.25 Crore', kyg: '₹25 Lakhs' },
+                  { label: 'Total Cost (Approx)', india: '₹1.25 Crore', kyg: '₹16 Lakhs' },
                 ].map((row, idx) => (
                   <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-section/50 transition-colors">
                     <td className="p-6 font-semibold text-sm text-text-primary">{row.label}</td>
@@ -178,9 +179,10 @@ const Home = () => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
           <p className="text-center text-text-secondary text-sm mt-6">
-            Save up to <strong className="text-text-primary">₹1 Crore</strong> on your MBBS Degree by choosing Kyrgyzstan.
+            Save up to <strong className="text-text-primary">₹1.09 Crore</strong> on your MBBS Degree by choosing Kyrgyzstan.
           </p>
         </div>
       </section>
@@ -192,7 +194,7 @@ const Home = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-primary">Fee Structure 2025–2026</h2>
           
           <div className="py-8">
-            <div className="text-6xl md:text-8xl font-bold text-text-primary font-playfair">₹18<span className="text-4xl text-text-secondary">L</span></div>
+            <div className="text-6xl md:text-8xl font-bold text-text-primary font-playfair">₹16<span className="text-4xl text-text-secondary">L</span></div>
             <p className="text-sm text-text-secondary font-medium tracking-wide uppercase mt-4">Approx. Total Cost (5.5 Years)</p>
           </div>
 

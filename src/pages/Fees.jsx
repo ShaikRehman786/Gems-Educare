@@ -21,8 +21,8 @@ const Fees = () => {
   return (
     <>
       <Helmet>
-        <title>MBBS Fee Structure Adam University 2025-26 | ₹18L | Gems Educare</title>
-        <meta name="description" content="Detailed fee structure for MBBS at Adam University, Kyrgyzstan. Total package around ₹18L including tuition and admission. Transparent, no hidden charges." />
+        <title>MBBS Fee Structure Adam University 2025-26 | ₹16L | Gems Educare</title>
+        <meta name="description" content="Detailed fee structure for MBBS at Adam University, Kyrgyzstan. Total package around ₹16L including tuition and admission. Transparent, no hidden charges." />
       </Helmet>
 
       {/* Hero */}
@@ -30,7 +30,7 @@ const Fees = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Adam University School of Medicine</p>
           <h1 className="text-4xl md:text-6xl font-bold text-primary font-playfair">Fee Structure 2025–2026</h1>
-          <div className="text-6xl md:text-8xl font-bold text-text-primary font-playfair py-4">₹17–18<span className="text-4xl text-text-secondary">L</span></div>
+          <div className="text-6xl md:text-8xl font-bold text-text-primary font-playfair py-4">₹16<span className="text-4xl text-text-secondary">L</span></div>
           <p className="text-sm font-bold text-text-secondary uppercase tracking-widest">Approx Total Cost (5.5 Years)</p>
           <div className="mt-8 inline-block bg-white px-6 py-2 rounded border border-border text-xs font-bold uppercase tracking-widest text-primary">
             Transparent & No Hidden Charges
@@ -104,7 +104,7 @@ const Fees = () => {
                   <tr className="bg-navy text-white font-bold border-t border-navy">
                     <td className="p-6 text-sm" colSpan={2}>Total (5.5 Years — 11 Semesters)</td>
                     <td className="p-6 text-sm text-primary">USD 18,200</td>
-                    <td className="p-6 text-sm text-primary">Approx. ₹17,34,000</td>
+                    <td className="p-6 text-sm text-primary">Approx. ₹16,00,000</td>
                     <td className="p-6 text-sm text-primary">USD 2,300 / ₹2,19,000</td>
                   </tr>
                 </tbody>

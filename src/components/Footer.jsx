@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Col 1 */}
         <div className="md:col-span-4 space-y-8">
-          <img src={gemsLogo} alt="Gems Educare" className="h-12 w-auto object-contain" />
+          <img src={gemsLogo} alt="Gems Educare" className="h-14 sm:h-16 md:h-20 w-auto object-contain" />
           <p className="text-border text-sm leading-relaxed">
             Leading medical education consultancy guiding Indian students to a successful career at Adam University, Kyrgyzstan.
           </p>
