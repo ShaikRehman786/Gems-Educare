@@ -26,13 +26,13 @@ const Fees = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gray-50 py-24 px-4 text-center border-b border-gray-100">
+      <section className="bg-section py-24 px-4 text-center border-b border-border">
         <div className="max-w-4xl mx-auto space-y-6">
           <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Adam University School of Medicine</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 font-playfair">Fee Structure 2025–2026</h1>
-          <div className="text-6xl md:text-8xl font-bold text-gray-900 font-playfair py-4">₹17–18<span className="text-4xl text-gray-400">L</span></div>
-          <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">Approx Total Cost (5.5 Years)</p>
-          <div className="mt-8 inline-block bg-white px-6 py-2 rounded border border-gray-200 text-xs font-bold uppercase tracking-widest text-primary">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary font-playfair">Fee Structure 2025–2026</h1>
+          <div className="text-6xl md:text-8xl font-bold text-text-primary font-playfair py-4">₹17–18<span className="text-4xl text-text-secondary">L</span></div>
+          <p className="text-sm font-bold text-text-secondary uppercase tracking-widest">Approx Total Cost (5.5 Years)</p>
+          <div className="mt-8 inline-block bg-white px-6 py-2 rounded border border-border text-xs font-bold uppercase tracking-widest text-primary">
             Transparent & No Hidden Charges
           </div>
         </div>
@@ -43,22 +43,22 @@ const Fees = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Initial Costs</p>
-            <h2 className="text-3xl font-bold text-gray-900">Documentation & Processing</h2>
+            <h2 className="text-3xl font-bold text-primary">Documentation & Processing</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-10 rounded-xl border border-gray-100 hover:border-primary transition-colors">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Documentation & Consulting Fee</h3>
-              <div className="text-4xl font-bold text-gray-900 font-playfair mb-8">₹1,50,000</div>
-              <ul className="text-sm text-gray-600 space-y-3">
+            <div className="bg-white p-10 rounded-xl border border-border hover:border-primary transition-colors">
+              <h3 className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Documentation & Consulting Fee</h3>
+              <div className="text-4xl font-bold text-text-primary font-playfair mb-8">₹1,50,000</div>
+              <ul className="text-sm text-text-secondary space-y-3">
                 {['Translation of documents', 'University documentation', 'Ministry documentation', 'Visa documentation', 'Document attestation', 'Police registration & clearance'].map((i, idx) => (
                   <li key={idx} className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 flex-shrink-0 mt-0.5" />{i}</li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white p-10 rounded-xl border border-gray-100 hover:border-primary transition-colors">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Processing & Travelling Fee</h3>
-              <div className="text-4xl font-bold text-gray-900 font-playfair mb-8">₹75,000</div>
-              <ul className="text-sm text-gray-600 space-y-3">
+            <div className="bg-white p-10 rounded-xl border border-border hover:border-primary transition-colors">
+              <h3 className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Processing & Travelling Fee</h3>
+              <div className="text-4xl font-bold text-text-primary font-playfair mb-8">₹75,000</div>
+              <ul className="text-sm text-text-secondary space-y-3">
                 {['One-way flight ticket', 'Immigration clearance', 'Pickup & drop (airport to hostel)', 'Residential permissions'].map((i, idx) => (
                   <li key={idx} className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 flex-shrink-0 mt-0.5" />{i}</li>
                 ))}
@@ -69,39 +69,39 @@ const Fees = () => {
       </section>
 
       {/* Main Table — Semester Wise */}
-      <section className="py-24 px-4 bg-gray-50 border-t border-gray-100">
+      <section className="py-24 px-4 bg-section border-t border-border">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Detailed Breakdown</p>
-            <h2 className="text-3xl font-bold text-gray-900">Semester Wise Fee Structure</h2>
+            <h2 className="text-3xl font-bold text-primary">Semester Wise Fee Structure</h2>
           </div>
           
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-12">
+          <div className="bg-white rounded-xl shadow-sm border border-border overflow-hidden mb-12">
             <div className="overflow-x-auto">
               <table className="w-full text-left min-w-[800px]">
-                <thead>
-                  <tr className="border-b border-gray-100">
-                    <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Duration</th>
-                    <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Semester</th>
-                    <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Tuition (USD)</th>
-                    <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Approx (INR)</th>
-                    <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Hostel Fees</th>
+                <thead className="bg-primary text-white">
+                  <tr className="border-b border-border">
+                    <th className="p-6 text-xs font-bold uppercase tracking-wider">Duration</th>
+                    <th className="p-6 text-xs font-bold uppercase tracking-wider">Semester</th>
+                    <th className="p-6 text-xs font-bold uppercase tracking-wider">Tuition (USD)</th>
+                    <th className="p-6 text-xs font-bold uppercase tracking-wider">Approx (INR)</th>
+                    <th className="p-6 text-xs font-bold uppercase tracking-wider">Hostel Fees</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-800">
+                <tbody className="text-text-primary">
                   {feeData.map((row, idx) => (
-                    <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors">
-                      <td className="p-6 font-semibold text-gray-900 text-sm">{row.year}</td>
-                      <td className="p-6 font-medium text-gray-600 text-sm">{row.sem}</td>
-                      <td className="p-6 font-bold text-gray-900 text-sm">{row.tuition}</td>
-                      <td className="p-6 text-gray-500 text-sm">{row.tuitionInr}</td>
-                      <td className={`p-6 text-sm font-medium ${row.hostel === 'Optional' ? 'text-gray-400 italic' : 'text-primary font-bold bg-primary/[0.02]'}`}>
+                    <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-section/50 transition-colors">
+                      <td className="p-6 font-semibold text-text-primary text-sm">{row.year}</td>
+                      <td className="p-6 font-medium text-text-secondary text-sm">{row.sem}</td>
+                      <td className="p-6 font-bold text-text-primary text-sm">{row.tuition}</td>
+                      <td className="p-6 text-text-secondary text-sm">{row.tuitionInr}</td>
+                      <td className={`p-6 text-sm font-medium ${row.hostel === 'Optional' ? 'text-text-secondary italic' : 'text-primary font-bold bg-primary/[0.02]'}`}>
                         {row.hostel === 'Optional' ? 'Optional' : `${row.hostel} / ${row.hostelInr}`}
                       </td>
                     </tr>
                   ))}
                   {/* Total Row */}
-                  <tr className="bg-gray-900 text-white font-bold border-t border-gray-900">
+                  <tr className="bg-navy text-white font-bold border-t border-navy">
                     <td className="p-6 text-sm" colSpan={2}>Total (5.5 Years — 11 Semesters)</td>
                     <td className="p-6 text-sm text-primary">USD 18,200</td>
                     <td className="p-6 text-sm text-primary">Approx. ₹17,34,000</td>
@@ -113,17 +113,17 @@ const Fees = () => {
           </div>
 
           {/* Important Notes */}
-          <div className="bg-white p-10 rounded-xl border border-gray-100 flex gap-6 items-start">
-            <AlertCircle className="text-primary flex-shrink-0" size={24} />
+          <div className="bg-white p-10 rounded-xl border border-border flex gap-6 items-start">
+            <AlertCircle className="text-secondary flex-shrink-0" size={24} />
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-6 font-playfair">Important Notes</h3>
-              <ul className="space-y-4 text-gray-600 text-sm">
-                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 mt-0.5 flex-shrink-0" /> Medical Assistance: $100 mandatory per year</li>
-                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 mt-0.5 flex-shrink-0" /> 1st Semester fee includes entry, extension & conversion to student visa</li>
-                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 mt-0.5 flex-shrink-0" /> First year hostel is <strong className="text-gray-900">mandatory</strong> — Food/Mess: $150 USD/month | Accommodation: $50 USD/month</li>
-                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 mt-0.5 flex-shrink-0" /> Visa renewal fees applicable as per immigration authorities</li>
-                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-primary/60 mt-0.5 flex-shrink-0" /> USD to INR exchange rates on day of transaction apply</li>
-                <li className="flex items-start gap-3 font-semibold text-gray-900"><CheckCircle size={16} className="text-primary mt-0.5 flex-shrink-0" /> Education Loan Assistance Available — ABSOLUTELY NO HIDDEN CHARGES</li>
+              <h3 className="text-lg font-bold text-primary mb-6 font-playfair">Important Notes</h3>
+              <ul className="space-y-4 text-text-secondary text-sm">
+                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> Medical Assistance: $100 mandatory per year</li>
+                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> 1st Semester fee includes entry, extension & conversion to student visa</li>
+                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> First year hostel is <strong className="text-text-primary">mandatory</strong> — Food/Mess: $150 USD/month | Accommodation: $50 USD/month</li>
+                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> Visa renewal fees applicable as per immigration authorities</li>
+                <li className="flex items-start gap-3"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> USD to INR exchange rates on day of transaction apply</li>
+                <li className="flex items-start gap-3 font-semibold text-text-primary"><CheckCircle size={16} className="text-secondary mt-0.5 flex-shrink-0" /> Education Loan Assistance Available — ABSOLUTELY NO HIDDEN CHARGES</li>
               </ul>
             </div>
           </div>
@@ -131,24 +131,24 @@ const Fees = () => {
       </section>
 
       {/* Education Loan */}
-      <section className="py-24 px-4 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto bg-gray-50 rounded-2xl p-12 flex flex-col md:flex-row items-center justify-between gap-12 border border-gray-100">
+      <section className="py-24 px-4 bg-white border-t border-border">
+        <div className="max-w-5xl mx-auto bg-section rounded-2xl p-12 flex flex-col md:flex-row items-center justify-between gap-12 border border-border">
           <div className="flex-1 space-y-6">
             <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Financial Support</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Education Loan Assistance</h2>
-            <p className="text-gray-600 leading-relaxed max-w-xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-playfair">Education Loan Assistance</h2>
+            <p className="text-text-secondary leading-relaxed max-w-xl">
               Gems Educare helps students in securing Education Loans from leading banks. 
               We provide all necessary documents required for the loan process including University Admission Letters.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <span className="text-sm font-semibold text-gray-900 flex items-center gap-2"><CheckCircle size={16} className="text-primary" /> Bank Documentation</span>
-              <span className="text-sm font-semibold text-gray-900 flex items-center gap-2"><CheckCircle size={16} className="text-primary" /> 100% Genuine Guidance</span>
+              <span className="text-sm font-semibold text-text-primary flex items-center gap-2"><CheckCircle size={16} className="text-primary" /> Bank Documentation</span>
+              <span className="text-sm font-semibold text-text-primary flex items-center gap-2"><CheckCircle size={16} className="text-primary" /> 100% Genuine Guidance</span>
             </div>
           </div>
           <div className="flex-shrink-0">
             <a
               href="https://wa.me/919160404666?text=I%20want%20to%20know%20about%20Education%20Loan%20for%20MBBS"
-              className="bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-primary-dark transition-colors inline-block"
+              className="bg-primary text-white rounded-xl px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-navy transition-all transition-colors inline-block"
             >
               Get Loan Assistance
             </a>
@@ -157,10 +157,10 @@ const Fees = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-white py-24 px-4 text-center border-t border-gray-100">
+      <section className="bg-white py-24 px-4 text-center border-t border-border">
         <div className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-3xl font-bold text-gray-900 font-playfair">Get Your Fee Structure PDF</h2>
-          <p className="text-gray-500">Download the detailed fee breakdown for Adam University.</p>
+          <h2 className="text-3xl font-bold text-primary font-playfair">Get Your Fee Structure PDF</h2>
+          <p className="text-text-secondary">Download the detailed fee breakdown for Adam University.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="https://wa.me/919160404666"
@@ -170,7 +170,7 @@ const Fees = () => {
             </a>
             <button
               onClick={() => window.print()}
-              className="border border-gray-200 text-gray-900 px-8 py-4 rounded text-sm font-bold uppercase tracking-wide flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+              className="border border-border text-text-primary px-8 py-4 rounded text-sm font-bold uppercase tracking-wide flex items-center justify-center gap-2 hover:bg-section transition-colors"
             >
               <Download size={18} /> Print Table
             </button>

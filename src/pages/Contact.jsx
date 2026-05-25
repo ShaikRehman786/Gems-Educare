@@ -36,7 +36,7 @@ const Contact = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
-          <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-border border-t-8 border-t-primary">
+          <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-2xl border border-border border-t-8 border-t-accent">
             <h2 className="text-3xl font-bold text-primary mb-8">Send a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -47,7 +47,7 @@ const Contact = () => {
                     name="name"
                     required
                     onChange={handleChange}
-                    className="w-full bg-primary/5 border-2 border-transparent focus:border-primary rounded-lg p-4 outline-none transition-all"
+                    className="w-full bg-primary/5 border-2 border-transparent focus:border-accent rounded-lg p-4 outline-none transition-all"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -58,7 +58,7 @@ const Contact = () => {
                     name="phone"
                     required
                     onChange={handleChange}
-                    className="w-full bg-primary/5 border-2 border-transparent focus:border-primary rounded-lg p-4 outline-none transition-all"
+                    className="w-full bg-primary/5 border-2 border-transparent focus:border-accent rounded-lg p-4 outline-none transition-all"
                     placeholder="Enter phone number"
                   />
                 </div>
@@ -70,8 +70,8 @@ const Contact = () => {
                   name="email"
                   required
                   onChange={handleChange}
-                  className="w-full bg-primary/5 border-2 border-transparent focus:border-primary rounded-lg p-4 outline-none transition-all"
-                  placeholder="Enter email"
+                    className="w-full bg-primary/5 border-2 border-transparent focus:border-accent rounded-lg p-4 outline-none transition-all"
+                    placeholder="Enter email"
                 />
               </div>
               <div>
@@ -80,13 +80,13 @@ const Contact = () => {
                   name="message"
                   rows="4"
                   onChange={handleChange}
-                  className="w-full bg-primary/5 border-2 border-transparent focus:border-primary rounded-lg p-4 outline-none transition-all"
-                  placeholder="How can we help you?"
+                    className="w-full bg-primary/5 border-2 border-transparent focus:border-accent rounded-lg p-4 outline-none transition-all"
+                    placeholder="How can we help you?"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white font-black py-4 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-primary-light transition-all shadow-lg"
+                className="w-full bg-primary text-white rounded-xl font-black py-4 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-navy transition-all shadow-lg"
               >
                 Submit Inquiry <Send size={20} />
               </button>
@@ -95,7 +95,7 @@ const Contact = () => {
 
           {/* Contact Details */}
           <div className="space-y-8">
-            <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-border border-t-8 border-t-primary space-y-8">
+            <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-border border-t-8 border-t-accent space-y-8">
               <h2 className="text-3xl font-bold text-primary">Office Details</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">

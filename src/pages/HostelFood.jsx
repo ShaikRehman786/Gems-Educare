@@ -39,7 +39,7 @@ const HostelFood = () => {
                 "24/7 CCTV Monitoring", "High Speed WiFi", "Secure Accommodation"
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <CheckCircle className="text-primary" size={20} />
+                  <CheckCircle className="text-secondary" size={20} />
                   <span className="font-medium text-text-primary">{item}</span>
                 </div>
               ))}

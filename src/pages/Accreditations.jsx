@@ -12,10 +12,10 @@ const Accreditations = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gray-50 py-24 px-4 text-center border-b border-gray-100">
+      <section className="bg-section py-24 px-4 text-center border-b border-border">
         <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Your Degree is Valid Worldwide</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-playfair mb-6">International Accreditations</h1>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Adam University holds recognition from the world's most prestigious medical bodies.</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-primary font-playfair mb-6">International Accreditations</h1>
+        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Adam University holds recognition from the world's most prestigious medical bodies.</p>
       </section>
 
       {/* Recognition List */}
@@ -24,26 +24,26 @@ const Accreditations = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-5 space-y-8 sticky top-32">
               <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Globally Recognized</p>
-              <h2 className="text-3xl font-bold text-gray-900 font-playfair">Practice Medicine Anywhere in the World</h2>
-              <p className="text-sm leading-relaxed text-gray-600">
+              <h2 className="text-3xl font-bold text-primary font-playfair">Practice Medicine Anywhere in the World</h2>
+              <p className="text-sm leading-relaxed text-text-secondary">
                 A degree from Adam University opens doors across the globe. Our medical programs are strictly aligned with international medical education standards, allowing our graduates to practice medicine in India, the USA, the UK, Europe, and beyond.
               </p>
-              <div className="space-y-4 pt-4 border-t border-gray-100">
+              <div className="space-y-4 pt-4 border-t border-border">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="text-primary/60" size={20} />
-                  <span className="font-semibold text-sm text-gray-900">Eligible for NEXT / FMGE (India)</span>
+                  <span className="font-semibold text-sm text-text-primary">Eligible for NEXT / FMGE (India)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="text-primary/60" size={20} />
-                  <span className="font-semibold text-sm text-gray-900">Eligible for USMLE (USA)</span>
+                  <span className="font-semibold text-sm text-text-primary">Eligible for USMLE (USA)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="text-primary/60" size={20} />
-                  <span className="font-semibold text-sm text-gray-900">Eligible for PLAB (UK)</span>
+                  <span className="font-semibold text-sm text-text-primary">Eligible for PLAB (UK)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="text-primary/60" size={20} />
-                  <span className="font-semibold text-sm text-gray-900">Practice in Europe, Australia & Canada</span>
+                  <span className="font-semibold text-sm text-text-primary">Practice in Europe, Australia & Canada</span>
                 </div>
               </div>
             </div>
@@ -60,11 +60,11 @@ const Accreditations = () => {
                 { name: "ECFMG (USA)", detail: "Educational Commission for Foreign Medical Graduates" },
                 { name: "NMC India", detail: "National Medical Commission — India" },
               ].map((body, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors flex flex-col gap-3">
+                <div key={idx} className="bg-white p-8 rounded-xl border border-border hover:border-primary/30 transition-colors flex flex-col gap-3">
                   <Award className="text-primary" size={24} />
                   <div>
-                    <h3 className="font-bold text-gray-900 text-sm mb-1">{body.name}</h3>
-                    <p className="text-xs text-gray-500">{body.detail}</p>
+                    <h3 className="font-bold text-primary text-sm mb-1">{body.name}</h3>
+                    <p className="text-xs text-text-secondary">{body.detail}</p>
                   </div>
                 </div>
               ))}
@@ -74,13 +74,13 @@ const Accreditations = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gray-900 py-24 px-4 text-center">
+      <section className="bg-navy py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair italic">Your Globally Valid Degree Awaits</h2>
-          <p className="text-gray-400">Join 5000+ students who trusted Gems Educare to guide them to Adam University.</p>
+          <p className="text-text-secondary">Join 5000+ students who trusted Gems Educare to guide them to Adam University.</p>
           <a
             href="https://wa.me/919160404666"
-            className="inline-block bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-primary-dark transition-colors"
+            className="inline-block bg-primary text-white rounded-xl px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-navy transition-all transition-colors"
           >
             Get Free Counselling
           </a>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
-import gemsLogo from '../assets/gems/logo.png';
+import gemsLogo from '../assets/gemsbr/3.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +25,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`w-full sticky top-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'}`}>
+    <nav className={`w-full sticky top-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm border-b border-border'}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
-        <Link to="/" className="flex-shrink-0 relative z-20">
-          <img src={gemsLogo} alt="Gems Educare" className="h-12 md:h-16 w-auto" />
-        </Link>
+        <div className="flex items-center"><Link to="/" className="flex-shrink-0 relative z-20 hover:opacity-90 transition-opacity">
+          <img src={gemsLogo} alt="Gems Educare" className="h-12 md:h-16 w-auto object-contain" />
+        </Link></div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">
@@ -40,7 +40,7 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) =>
                 `text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary ${
-                  isActive ? 'text-primary' : 'text-gray-800'
+                  isActive ? 'text-primary' : 'text-text-primary'
                 }`
               }
             >
@@ -49,7 +49,7 @@ const Navbar = () => {
           ))}
           <a
             href="tel:+919160404666"
-            className="flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded text-sm font-bold tracking-wide uppercase hover:bg-primary-dark transition-colors"
+            className="flex items-center gap-2 bg-primary text-white rounded-xl px-6 py-2.5 rounded text-sm font-bold tracking-wide uppercase hover:bg-primary-dark transition-all transition-colors"
           >
             <Phone size={16} /> Call Now
           </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-gray-800 p-2 relative z-20 focus:outline-none"
+          className="lg:hidden text-text-primary p-2 relative z-20 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -71,7 +71,7 @@ const Navbar = () => {
         } lg:hidden flex flex-col pt-24 px-6 gap-6 h-screen overflow-y-auto`}
       >
         <button
-          className="absolute top-6 right-6 text-gray-800 p-2 bg-gray-100 rounded-full"
+          className="absolute top-6 right-6 text-text-primary p-2 bg-section rounded-full"
           onClick={() => setIsOpen(false)}
         >
           <X size={24} />
@@ -83,8 +83,8 @@ const Navbar = () => {
             to={link.path}
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
-              `text-xl font-playfair font-bold border-b border-gray-100 pb-4 ${
-                isActive ? 'text-primary' : 'text-gray-800'
+              `text-xl font-playfair font-bold border-b border-border pb-4 ${
+                isActive ? 'text-primary' : 'text-text-primary'
               }`
             }
           >
@@ -95,7 +95,7 @@ const Navbar = () => {
         <div className="pt-4 pb-12">
           <a
             href="tel:+919160404666"
-            className="w-full flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold uppercase tracking-wide"
+            className="w-full flex justify-center items-center gap-2 bg-primary text-white rounded-xl px-8 py-4 rounded font-bold uppercase tracking-wide"
             onClick={() => setIsOpen(false)}
           >
             <Phone size={18} /> Call Now

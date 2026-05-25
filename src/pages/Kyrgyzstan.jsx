@@ -11,30 +11,30 @@ const Kyrgyzstan = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gray-50 py-24 px-4 text-center border-b border-gray-100">
+      <section className="bg-section py-24 px-4 text-center border-b border-border">
         <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">A Land of Opportunity</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 font-playfair mb-6">Kyrgyzstan</h1>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Safe, affordable, and student-friendly environment for medical aspirants.</p>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary font-playfair mb-6">Kyrgyzstan</h1>
+        <p className="text-text-secondary text-lg max-w-2xl mx-auto">Safe, affordable, and student-friendly environment for medical aspirants.</p>
       </section>
 
       {/* Bishkek Intro */}
-      <section className="py-24 px-4 bg-white border-b border-gray-100">
+      <section className="py-24 px-4 bg-white border-b border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 aspect-[4/3] bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100">
-             <div className="text-gray-400 font-playfair italic text-2xl">[ Bishkek City View ]</div>
+          <div className="order-2 lg:order-1 aspect-[4/3] bg-section rounded-2xl flex items-center justify-center border border-border">
+             <div className="text-text-secondary font-playfair italic text-2xl">[ Bishkek City View ]</div>
           </div>
           <div className="order-1 lg:order-2 space-y-8">
             <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Capital City</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-playfair leading-tight">
               Bishkek — The Heart of <span className="italic font-normal text-primary">Kyrgyzstan</span>
             </h2>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-text-secondary">
               Bishkek is the capital and largest city of Kyrgyzstan, located in the Chuy region. Situated along the Chu River valley, Bishkek is known for its numerous green spaces, parks, and gardens alongside Soviet-era buildings and monuments.
             </p>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-text-secondary">
               The city serves as the political, economic, and cultural center of Kyrgyzstan — offering a safe, affordable, and student-friendly environment for international medical students.
             </p>
-            <blockquote className="border-l-2 border-primary pl-6 py-2 text-gray-900 font-playfair italic text-lg">
+            <blockquote className="border-l-2 border-primary pl-6 py-2 text-text-primary font-playfair italic text-lg">
               "Bishkek offers a perfect blend of high-quality education and an affordable lifestyle for Indian students."
             </blockquote>
           </div>
@@ -42,11 +42,11 @@ const Kyrgyzstan = () => {
       </section>
 
       {/* Info Cards */}
-      <section className="bg-gray-50 py-24 px-4">
+      <section className="bg-section py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Student Life</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Why Bishkek for Medical Studies?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-playfair">Why Bishkek for Medical Studies?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -71,10 +71,10 @@ const Kyrgyzstan = () => {
                 icon: <TreePine className="text-primary" size={24} />
               }
             ].map((card, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="mb-6 bg-gray-50 inline-block p-3 rounded-lg">{card.icon}</div>
-                <h3 className="text-sm font-bold text-gray-900 mb-3">{card.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
+              <div key={idx} className="bg-white p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="mb-6 bg-section inline-block p-3 rounded-lg">{card.icon}</div>
+                <h3 className="text-sm font-bold text-primary mb-3">{card.title}</h3>
+                <p className="text-text-secondary text-xs leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -85,13 +85,13 @@ const Kyrgyzstan = () => {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-5 space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Essential Information</h2>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-playfair">Essential Information</h2>
+            <p className="text-sm leading-relaxed text-text-secondary">
               Kyrgyzstan is a student-friendly nation that welcomes thousands of international aspirants every year. With its modern infrastructure and safe environment, it provides the perfect backdrop for your medical journey.
             </p>
-            <div className="space-y-4 pt-4 border-t border-gray-100">
+            <div className="space-y-4 pt-4 border-t border-border">
               {['E-visa available for Kyrgyzstan', 'Direct flights from major Indian cities', 'Affordable local transport', 'Indian community & cultural familiarity'].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm font-medium text-gray-900">
+                <div key={i} className="flex items-center gap-3 text-sm font-medium text-text-primary">
                   <CheckCircle size={16} className="text-primary/60 flex-shrink-0" />{item}
                 </div>
               ))}
@@ -106,13 +106,13 @@ const Kyrgyzstan = () => {
                 { icon: <ShieldCheck size={20} />, label: 'Safety', value: 'Very Safe' },
                 { icon: <Cloud size={20} />, label: 'Green Spaces', value: 'Abundant Parks' },
               ].map((item, idx) => (
-                <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gray-50 p-6 rounded-xl border border-gray-100">
+                <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-section p-6 rounded-xl border border-border">
                   <div className="text-primary">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-sm">{item.label}</h4>
-                    <p className="text-xs text-gray-500 mt-1">{item.value}</p>
+                    <h4 className="font-bold text-primary text-sm">{item.label}</h4>
+                    <p className="text-xs text-text-secondary mt-1">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -121,13 +121,13 @@ const Kyrgyzstan = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-gray-900 py-24 px-4 text-center">
+      <section className="bg-navy py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair italic">Discover Your Future in Kyrgyzstan</h2>
-          <p className="text-gray-400">Safe. Affordable. World-class education.</p>
+          <p className="text-text-secondary">Safe. Affordable. World-class education.</p>
           <a
             href="https://wa.me/919160404666?text=I%20want%20to%20know%20more%20about%20life%20in%20Bishkek"
-            className="inline-block bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-primary-dark transition-colors"
+            className="inline-block bg-primary text-white rounded-xl px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-navy transition-all transition-colors"
           >
             Connect with Experts
           </a>
