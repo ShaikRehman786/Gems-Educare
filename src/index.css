@@ -5,13 +5,26 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-inter bg-white;
-    color: #111111;
+  html, body {
+    @apply font-inter bg-white text-gray-800 overflow-x-hidden;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair text-primary;
+    @apply font-playfair;
   }
+  h1 { @apply font-bold; }
+  h2 { @apply font-semibold; }
+  h3 { @apply font-medium; }
+}
+
+/* Marquee animation for accreditations ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+  display: inline-flex;
 }
 
 .animate-pulse-slow {

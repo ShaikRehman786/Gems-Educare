@@ -3,471 +3,294 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
-  ChevronRight, 
-  Star, 
-  Users, 
-  Award, 
-  CreditCard, 
   ArrowRight,
-  Stethoscope,
   ShieldCheck,
-  Zap,
-  GraduationCap,
   Globe,
-  MessageSquare,
-  Phone,
   Quote,
   Building2,
-  Hotel,
-  Bus,
   Library,
-  Wifi,
   Users2,
   HeartPulse,
-  Scale
+  Scale,
+  Zap,
+  BookOpen,
+  MapPin,
+  Utensils,
+  Wifi,
+  Star
 } from 'lucide-react';
 import FadeInUp from '../components/FadeInUp';
-import heroDoctor from '../assets/gems/hero_doctor.png';
 import gemsLogo from '../assets/gems/logo.png';
-import adamLogo from '../assets/gems/adam_logo.png';
-import bishkekCity from '../assets/gems/bishkek_city.png';
-import hostelBuilding from '../assets/gems/hostel_building.png';
 
 const Home = () => {
   return (
     <>
       <Helmet>
-        <title>MBBS in Kyrgyzstan for Indian Students | Gems Educare Vijayawada</title>
+        <title>MBBS in Kyrgyzstan for Indian Students | Gems Educare</title>
         <meta name="description" content="Study MBBS at Adam University, Kyrgyzstan with Gems Educare. Lowest fee structure, NMC approved, WHO accredited. Join 5000+ successful students." />
       </Helmet>
 
       {/* SECTION 1 — HERO */}
-      <section className="relative min-h-[90vh] flex items-center bg-primary overflow-hidden pt-12 md:pt-0">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-[-20deg] transform translate-x-1/4" />
-        <div className="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden py-20 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <FadeInUp>
-            <div className="space-y-6">
-              <span className="inline-block text-primary font-bold tracking-widest text-sm uppercase border-b-2 border-primary pb-1">
-                WHO | ECFMG | NMC INDIA | 15+ INT'L COUNCILS
+            <div className="space-y-8">
+              <span className="inline-block text-primary font-bold tracking-[0.15em] text-[10px] uppercase">
+                WHO • ECFMG • NMC INDIA • 15+ INT'L COUNCILS
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
-                STUDY <span className="text-primary">MBBS / MD</span> PROGRAM
+              <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-gray-900 leading-[1.1]">
+                Study <span className="text-primary italic font-normal">MBBS/MD</span> <br />Program Abroad.
               </h1>
-              <p className="text-xl text-white/80 max-w-xl leading-relaxed">
-                Leading International Medical University. <br />
-                <span className="text-primary font-bold">Your White Coat is Waiting.</span>
+              <p className="text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed">
+                Join a leading international medical university. Get a globally recognized degree with world-class clinical exposure at an affordable cost.
               </p>
+              
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
                   href="https://wa.me/919160404666"
-                  className="bg-white text-primary px-8 py-4 rounded-md font-bold text-lg flex items-center justify-center gap-2 hover:bg-primary transition-all transform hover:-translate-y-1"
+                  className="bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors"
                 >
-                  Get Free Counselling <ArrowRight size={20} />
+                  Get Free Counselling <ArrowRight size={16} />
                 </a>
                 <Link
                   to="/fees"
-                  className="border-2 border-white text-white px-8 py-4 rounded-md font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
+                  className="border border-gray-200 text-gray-800 px-8 py-4 rounded text-sm font-bold uppercase tracking-wide flex items-center justify-center hover:border-gray-900 hover:text-gray-900 transition-colors"
                 >
-                  Request Fee Structure
+                  View Fee Structure
                 </Link>
+              </div>
+
+              <div className="flex items-center gap-6 pt-8 border-t border-gray-100">
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    {[1,2,3,4].map((i) => (
+                      <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200" />
+                    ))}
+                  </div>
+                  <div className="text-xs font-semibold text-gray-600">
+                    <span className="text-gray-900 font-bold block text-sm">5000+</span> Students Enrolled
+                  </div>
+                </div>
+                <div className="h-10 w-px bg-gray-200"></div>
+                <div className="text-xs font-semibold text-gray-600">
+                  <span className="text-gray-900 font-bold block text-sm">4.9/5</span> Google Rating
+                </div>
               </div>
             </div>
           </FadeInUp>
           <div className="relative hidden lg:block">
             <FadeInUp delay={0.2}>
-              <img 
-                src={heroDoctor} 
-                alt="Medical Student" 
-                className="w-full h-auto drop-shadow-2xl rounded-2xl"
-              />
+              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative">
+                {/* Placeholder for Hero Image */}
+                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-playfair italic text-2xl">
+                  [ Hero Image ]
+                </div>
+              </div>
             </FadeInUp>
           </div>
         </div>
       </section>
 
       {/* SECTION 2 — STATS BAR */}
-      <section className="bg-white border-t-4 border-primary py-12 px-4 shadow-xl relative z-20">
+      <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x divide-gray-200">
             {[
               { num: '5000+', label: 'Students Enrolled' },
-              { num: '4.5+1 Year', label: 'Course Duration' },
+              { num: '4.5+1 Yr', label: 'Course Duration' },
               { num: '7+', label: 'Accreditations' },
               { num: '₹18L', label: 'Approx Total Cost' },
             ].map((stat, idx) => (
               <div key={idx} className="space-y-2">
-                <div className="text-4xl font-black text-primary font-playfair">{stat.num}</div>
-                <div className="text-[10px] md:text-xs font-bold text-text-secondary tracking-tighter uppercase">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary font-playfair">{stat.num}</div>
+                <div className="text-[10px] md:text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 — BENEFITS SECTION */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Top Medical Colleges in Kyrgyzstan</h2>
-            <div className="w-24 h-1 bg-primary mx-auto" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "No Entry Tests Required", "No IELTS / TOEFL", "No Donations", "No Language Course",
-              "No Hidden Charges", "No Age Limit", "MBBS in 5.5 Years", "ECFMG Approved",
-              "WHO Approved", "100% Confirmed Admission", "100% Visa Support", "Attached Teaching Hospital",
-              "Low Tuition Fee", "Pay on Arrival", "International Faculty", "3 Meals Daily"
-            ].map((benefit, idx) => (
-              <FadeInUp key={idx} delay={idx * 0.05}>
-                <div className="flex items-center gap-3 bg-white p-4 rounded-lg border border-border shadow-sm hover:border-primary transition-colors">
-                  <CheckCircle className="text-support flex-shrink-0" size={18} />
-                  <span className="text-text-primary font-medium text-sm">{benefit}</span>
-                </div>
-              </FadeInUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 — WHY ADAM UNIVERSITY? */}
-      <section className="bg-white py-20 px-4">
+      {/* SECTION 3 — ABOUT ADAM UNIVERSITY */}
+      <section className="bg-white py-24 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="aspect-square bg-gray-50 rounded-2xl relative overflow-hidden flex items-center justify-center">
+             <div className="text-gray-400 font-playfair italic text-2xl">[ Adam University Building ]</div>
+          </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Why Adam University?</h2>
-            <p className="text-lg text-text-secondary mb-8 italic">
-              "Trusted by 5000+ Students | NMC India Approved"
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Why Study in Adam University?</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              A premier institution for <span className="italic font-normal">medical excellence</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              Adam University occupies a leading position in national university rankings and is represented by students from more than <strong className="text-gray-900 font-semibold">25 different countries</strong>. Ranked among the Top Medical Colleges in Kyrgyzstan.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               {[
-                "Top-ranked university",
+                "WHO & ECFMG Approved",
                 "Students from 25+ countries",
-                "WHO approved",
-                "ECFMG approved",
                 "International curriculum",
-                "Comprehensive learning approach",
-                "Academic + extracurricular development",
-                "Top Medical Colleges in Kyrgyzstan"
+                "Approved by 15+ councils",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <CheckCircle className="text-primary flex-shrink-0" size={18} />
-                  <span className="text-text-primary font-medium">{item}</span>
+                  <span className="text-gray-700 text-sm font-medium">{item}</span>
                 </div>
               ))}
             </div>
-          </div>
-          <div className="bg-primary-dark p-12 rounded-3xl text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary opacity-10 rounded-full -translate-y-16 translate-x-16" />
-            <div className="relative z-10 space-y-8">
-              <div className="flex items-center gap-4">
-                <img src={adamLogo} alt="Adam University" className="h-16 w-16 bg-white p-2 rounded-full" />
-                <div>
-                  <h3 className="text-2xl font-bold">Adam University</h3>
-                  <p className="text-primary font-medium uppercase text-sm tracking-widest">School of Medicine</p>
-                </div>
-              </div>
-              <p className="text-lg leading-relaxed opacity-90">
-                Founded in 1994, Adam University is one of the most prestigious medical universities in Kyrgyzstan, 
-                dedicated to providing world-class medical education to international students.
-              </p>
-              <div className="flex flex-col gap-4">
-                <div className="bg-white/10 p-4 rounded-lg flex items-center justify-between">
-                  <span className="font-bold">Total Students</span>
-                  <span className="text-primary font-bold">5000+</span>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg flex items-center justify-between">
-                  <span className="font-bold">Course Duration</span>
-                  <span className="text-primary font-bold">4.5+1 Years</span>
-                </div>
-              </div>
+            <div className="mt-10">
+              <Link to="/university" className="text-primary font-bold text-sm uppercase tracking-wide flex items-center gap-2 hover:text-primary-dark transition-colors">
+                Discover the University <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5 — INDIA VS KYRGYZSTAN TABLE */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-2xl border border-border">
-          <table className="w-full text-left border-collapse bg-white">
-            <thead>
-              <tr className="bg-primary text-white">
-                <th className="p-6 text-xl">Comparison</th>
-                <th className="p-6 text-xl">India (Private)</th>
-                <th className="p-6 text-xl text-primary">Kyrgyzstan (Adam)</th>
-              </tr>
-            </thead>
-            <tbody className="text-text-primary">
-              {[
-                { label: 'Total Budget', india: '₹60 Lakhs - ₹1.2 Cr', kyg: '₹18 Lakhs' },
-                { label: 'Entrance Exam', india: 'NEET (High Rank)', kyg: 'NEET (Qualify Only)' },
-                { label: 'Donation', india: 'Huge Capitation', kyg: 'Zero Donation' },
-                { label: 'Admission', india: 'Extremely Hard', kyg: 'Direct & Simple' },
-                { label: 'Infrastructure', india: 'Varies', kyg: 'Modern & Global' },
-                { label: 'Living Cost', india: 'High', kyg: 'Affordable' },
-              ].map((row, idx) => (
-                <tr key={idx} className="border-b border-border hover:bg-primary/5 transition-colors">
-                  <td className="p-6 font-bold">{row.label}</td>
-                  <td className="p-6 text-text-secondary">{row.india}</td>
-                  <td className="p-6 font-bold text-primary flex items-center gap-2">
-                    <CheckCircle size={18} className="text-support" /> {row.kyg}
-                  </td>
+      {/* SECTION 4 — INDIA VS KYRGYZSTAN TABLE */}
+      <section className="bg-gray-50 py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Make an Informed Decision</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">India vs Kyrgyzstan</h2>
+          </div>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-gray-100">
+                  <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">Parameters</th>
+                  <th className="p-6 text-xs font-bold text-gray-500 uppercase tracking-wider bg-gray-50/50">India (Private)</th>
+                  <th className="p-6 text-xs font-bold text-primary uppercase tracking-wider bg-primary/5">Kyrgyzstan (Adam)</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="bg-primary-dark p-6 text-center text-white">
-            <p className="text-xl">
-              Save over <span className="text-primary font-black">₹40,00,000</span> and get a Global Degree!
-            </p>
+              </thead>
+              <tbody className="text-gray-800">
+                {[
+                  { label: 'Total Course Duration', india: '5.6 Years', kyg: '5.6 Years' },
+                  { label: 'Total College Fees', india: '₹70–90 Lakhs', kyg: '₹15–17 Lakhs' },
+                  { label: 'Exit Test (NEXT/NMC)', india: 'Yes', kyg: 'Yes' },
+                  { label: 'MCI/WHO/FAIMER Listed', india: 'Yes', kyg: 'Yes' },
+                  { label: 'Total Cost (Approx)', india: '₹1.25 Crore', kyg: '₹25 Lakhs' },
+                ].map((row, idx) => (
+                  <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors">
+                    <td className="p-6 font-semibold text-sm text-gray-900">{row.label}</td>
+                    <td className="p-6 text-sm text-gray-500">{row.india}</td>
+                    <td className="p-6 font-bold text-primary text-sm bg-primary/[0.02]">{row.kyg}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+          <p className="text-center text-gray-500 text-sm mt-6">
+            Save up to <strong className="text-gray-900">₹1 Crore</strong> on your MBBS Degree by choosing Kyrgyzstan.
+          </p>
         </div>
       </section>
 
-      {/* SECTION 6 — FEE SNAPSHOT */}
-      <section className="bg-primary py-20 px-4 text-white text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h2 className="text-4xl font-bold">Complete Package</h2>
-          <div className="text-7xl md:text-9xl font-black text-primary font-playfair animate-pulse">₹18L</div>
-          <p className="text-xl opacity-80 uppercase tracking-widest">Full 6 Years Tuition + Admission</p>
+      {/* SECTION 5 — FEE SNAPSHOT */}
+      <section className="bg-white py-24 px-4 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Transparent & No Hidden Charges</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">Fee Structure 2025–2026</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto pt-8">
-            <div className="bg-white/5 p-4 rounded-lg flex justify-between border-l-2 border-primary">
-              <span>Tuition Fees</span>
-              <span className="text-primary font-bold">$18,200</span>
+          <div className="py-8">
+            <div className="text-6xl md:text-8xl font-bold text-gray-900 font-playfair">₹18<span className="text-4xl text-gray-400">L</span></div>
+            <p className="text-sm text-gray-500 font-medium tracking-wide uppercase mt-4">Approx. Total Cost (5.5 Years)</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left border-t border-gray-100 pt-12">
+            <div>
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">1st Year Tuition</p>
+              <p className="text-xl font-bold text-gray-900">$5,600 <span className="text-sm font-normal text-gray-500">(~₹5.3L)</span></p>
             </div>
-            <div className="bg-white/5 p-4 rounded-lg flex justify-between border-l-2 border-primary">
-              <span>Hostel (1 Year)</span>
-              <span className="text-primary font-bold">$1,150</span>
+            <div>
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Per Semester (Yr 2-5)</p>
+              <p className="text-xl font-bold text-gray-900">$1,800 <span className="text-sm font-normal text-gray-500">(~₹1.7L)</span></p>
             </div>
-            <div className="bg-white/5 p-4 rounded-lg flex justify-between border-l-2 border-primary">
-              <span>Food (Indian)</span>
-              <span className="text-primary font-bold">$1,150</span>
-            </div>
-            <div className="bg-white/5 p-4 rounded-lg flex justify-between border-l-2 border-primary">
-              <span>Degree & Processing</span>
-              <span className="text-primary font-bold">Included</span>
+            <div>
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Hostel (1st Year)</p>
+              <p className="text-xl font-bold text-gray-900">$1,150 <span className="text-sm font-normal text-gray-500">(~₹1L)</span></p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
-            <div className="bg-white p-6 rounded-xl text-text-primary">
-              <h4 className="font-bold text-sm uppercase text-text-secondary mb-2">Documentation</h4>
-              <div className="text-2xl font-black text-primary">₹1,50,000</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl text-text-primary">
-              <h4 className="font-bold text-sm uppercase text-text-secondary mb-2">Processing</h4>
-              <div className="text-2xl font-black text-primary">₹75,000</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl text-text-primary">
-              <h4 className="font-bold text-sm uppercase text-text-secondary mb-2">Medical Ins.</h4>
-              <div className="text-2xl font-black text-primary">$100/yr</div>
-            </div>
-          </div>
-
-          <div className="pt-10">
+          <div className="pt-12">
             <Link 
               to="/fees" 
-              className="bg-primary text-white px-10 py-4 rounded-md font-bold text-xl hover:bg-primary-light transition-all inline-block"
+              className="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wide hover:text-primary-dark transition-colors"
             >
-              View Full Fee Structure
+              View Detailed Breakdown <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7 — ACCREDITATIONS */}
-      <section className="bg-white py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 mb-12 text-center">
-          <h2 className="text-3xl font-bold text-primary">Global Accreditations</h2>
-        </div>
-        <div className="flex space-x-12 animate-marquee whitespace-nowrap mb-12">
-          {[
-            "WHO - World Health Organization",
-            "NMC - National Medical Commission",
-            "ECFMG - USA",
-            "FAIMER",
-            "IAAR - Kyrgyzstan",
-            "Ministry of Health",
-            "Pakistan Medical Council",
-            "Bangladesh Medical Council",
-            "Nepal Medical Council"
-          ].map((item, idx) => (
-            <div key={idx} className="inline-block bg-white px-8 py-4 rounded-lg border-2 border-primary text-primary font-bold shadow-sm">
-              {item}
-            </div>
-          ))}
-        </div>
-        <div className="text-center">
-          <Link 
-            to="/accreditations" 
-            className="inline-block border-2 border-primary text-primary px-8 py-3 rounded-md font-bold hover:bg-primary hover:text-white transition-colors"
-          >
-            View All Accreditations
-          </Link>
-        </div>
-      </section>
-
-      {/* SECTION 8 — FACILITIES */}
-      <section className="bg-white py-20 px-4">
+      {/* SECTION 6 — FACILITIES */}
+      <section className="bg-gray-50 py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">University Facilities</h2>
-            <div className="w-24 h-1 bg-primary mx-auto mt-4" />
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">World-Class Infrastructure</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">Medical Facilities</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { title: 'Simulation Center', icon: <HeartPulse size={24} /> },
-              { title: 'Anatomage Table', icon: <Scale size={24} /> },
-              { title: 'Medical Skills Labs', icon: <Stethoscope size={24} /> },
-              { title: 'Interactive Classrooms', icon: <Users size={24} /> },
-              { title: 'Advanced Research Center', icon: <Globe size={24} /> },
-              { title: 'Modern Library', icon: <Library size={24} /> },
-              { title: 'Computer Labs', icon: <Zap size={24} /> },
-              { title: 'VR/AR Learning', icon: <Globe size={24} /> },
-              { title: 'Reading Rooms', icon: <Library size={24} /> },
-              { title: 'Anatomy Museum', icon: <Building2 size={24} /> },
-              { title: '24/7 Security', icon: <ShieldCheck size={24} /> },
-              { title: 'Indian Mess', icon: <Bus size={24} /> },
+              { title: '3D Anatomage Table', icon: <Scale size={20} /> },
+              { title: 'Simulation Center', icon: <HeartPulse size={20} /> },
+              { title: 'Interactive Classrooms', icon: <BookOpen size={20} /> },
+              { title: 'Advanced Research Lab', icon: <Zap size={20} /> },
             ].map((facility, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl border-l-4 border-primary flex items-center gap-4 shadow-sm hover:translate-y-[-5px] transition-transform border border-border">
+              <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 flex flex-col items-center text-center gap-4 hover:border-primary transition-colors">
                 <div className="text-primary">{facility.icon}</div>
-                <h4 className="font-bold text-text-primary">{facility.title}</h4>
+                <h4 className="font-semibold text-gray-900 text-sm">{facility.title}</h4>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 9 — HOSTEL & LIFE */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="h-64 bg-primary/5 rounded-2xl border-4 border-primary flex items-center justify-center font-bold text-primary italic">Hostel Building</div>
-              <div className="h-64 bg-primary/5 rounded-2xl border-4 border-primary mt-8 flex items-center justify-center font-bold text-primary italic">Indian Mess</div>
-            </div>
-          </div>
-          <div className="order-1 lg:order-2 space-y-6">
-            <h2 className="text-4xl font-bold text-primary">Hostel & Food</h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              Gems Educare ensures students focus on their studies while we handle their comfort with premium accommodation and authentic food.
-            </p>
-            <div className="space-y-4">
-              {[
-                "Separate Boys Hostel", "Separate Girls Hostel", "Indian Warden", "24/7 Security",
-                "24/7 CCTV", "High Speed WiFi", "North Indian Food", "South Indian Food",
-                "Vegetarian Food", "Non-Vegetarian Food", "Secure Accommodation"
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <CheckCircle className="text-primary" size={20} />
-                  <span className="font-medium text-text-primary">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 10 — ADMISSION PROCESS */}
-      <section className="bg-primary-dark py-20 px-4 text-white">
+      {/* SECTION 7 — TESTIMONIALS */}
+      <section className="bg-white py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Admission Process</h2>
-            <p className="mt-4 text-white/60">Simple step-by-step journey to your medical career</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {[
-              { step: '01', title: 'Passport', desc: 'Passport Application' },
-              { step: '02', title: 'Documents', desc: 'Documentation' },
-              { step: '03', title: 'Enrollment', desc: 'University Enrollment' },
-              { step: '04', title: 'Visa', desc: 'Visa Application' },
-              { step: '05', title: 'Hostel', desc: 'Hostel Reservation' },
-              { step: '06', title: 'Travel', desc: 'Processing & Travel' },
-            ].map((step, idx) => (
-              <div key={idx} className="text-center space-y-4 relative">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto shadow-lg shadow-primary/20">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-bold text-primary">{step.title}</h3>
-                <p className="text-sm text-white/70">{step.desc}</p>
-                {idx < 5 && <div className="hidden lg:block absolute top-8 -right-4 w-8 h-[2px] bg-white/20" />}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 11 — BISHKEK HIGHLIGHT */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex-1 space-y-6">
-            <h2 className="text-4xl font-bold text-primary">Bishkek City</h2>
-            <p className="text-lg leading-relaxed text-text-secondary">
-              Bishkek, the capital of Kyrgyzstan, is a safe, student-friendly environment with affordable living and modern infrastructure.
-            </p>
-            <ul className="grid grid-cols-2 gap-4">
-              <li className="flex items-center gap-2 font-bold"><CheckCircle size={16} className="text-primary" /> Safe Environment</li>
-              <li className="flex items-center gap-2 font-bold"><CheckCircle size={16} className="text-primary" /> Affordable Living</li>
-              <li className="flex items-center gap-2 font-bold"><CheckCircle size={16} className="text-primary" /> Modern Infrastructure</li>
-              <li className="flex items-center gap-2 font-bold"><CheckCircle size={16} className="text-primary" /> Green Spaces</li>
-            </ul>
-            <Link 
-              to="/kyrgyzstan" 
-              className="inline-block bg-primary text-white px-8 py-3 rounded-md font-bold hover:bg-primary-dark transition-colors"
-            >
-              Learn More About Kyrgyzstan
-            </Link>
-          </div>
-          <div className="flex-1 w-full h-80 bg-primary/5 rounded-3xl border-8 border-white shadow-2xl overflow-hidden font-black text-primary/10 italic flex items-center justify-center text-4xl">
-            Bishkek City View
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 12 — TESTIMONIALS */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">Student Success Stories</h2>
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Success Stories</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">What Our Students Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Dr. Rahul Sharma', year: 'Final Year Student', text: 'Choosing Gems Educare was the best decision for my career. They handled everything from admission to visa seamlessly.' },
-              { name: 'Dr. Sneha Reddy', year: '3rd Year Student', text: 'Adam University provides amazing clinical exposure. The Indian food in the hostel makes it feel like home.' },
-              { name: 'Dr. Arjun Varma', year: 'Graduate', text: 'The faculty is very supportive and the English medium curriculum is perfect for Indian students.' },
+              { name: 'Dr. Rahul Sharma', text: 'Choosing Gems Educare was the best decision for my career. They handled everything seamlessly.' },
+              { name: 'Dr. Sneha Reddy', text: 'Adam University provides amazing clinical exposure. The Indian food makes it feel like home.' },
+              { name: 'Dr. Arjun Varma', text: 'The faculty is very supportive and the English medium curriculum is perfect for Indian students.' },
             ].map((t, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl relative border border-border shadow-sm">
-                <Quote className="text-primary/10 absolute top-4 right-4" size={60} />
-                <div className="flex text-primary mb-4">
-                  {[1,2,3,4,5].map(s => <Star key={s} size={16} fill="currentColor" />)}
+              <div key={idx} className="p-8 rounded-xl border border-gray-100 bg-gray-50/50 relative">
+                <Quote className="text-primary/20 absolute top-6 right-6" size={40} />
+                <div className="flex text-primary mb-6">
+                  {[1,2,3,4,5].map(s => <Star key={s} size={14} fill="currentColor" />)}
                 </div>
-                <p className="text-text-primary italic mb-6">"{t.text}"</p>
-                <div className="font-bold text-primary">{t.name}</div>
-                <div className="text-sm text-text-secondary">{t.year}</div>
+                <p className="text-gray-600 italic mb-8 text-sm leading-relaxed">"{t.text}"</p>
+                <div className="font-bold text-gray-900 text-sm">{t.name}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 13 — FINAL CTA BANNER */}
-      <section className="bg-primary py-16 px-4">
-        <div className="max-w-5xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-            Reserve Your White Coat Today
+      {/* SECTION 8 — CTA */}
+      <section className="bg-gray-900 py-24 px-4 text-center">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase">Begin Your Medical Journey</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-playfair italic">
+            Your White Coat is Waiting
           </h2>
-          <p className="text-2xl font-bold text-primary">
-            Your White Coat Is Waiting. Speak With Our Counsellor.
+          <p className="text-gray-400 text-sm md:text-base pb-8">
+            Join over 5000+ Indian students who have trusted Gems Educare to guide them to Adam University.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="https://wa.me/919160404666"
-              className="bg-primary text-white px-10 py-4 rounded-md font-bold text-xl hover:scale-105 transition-transform shadow-xl"
+              className="bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-primary-dark transition-colors"
             >
               Get Free Counselling
             </a>
             <Link
               to="/contact"
-              className="bg-secondary text-white px-10 py-4 rounded-md font-bold text-xl hover:bg-secondary-dark transition-all shadow-xl"
+              className="bg-white text-gray-900 px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors"
             >
               Apply Now
             </Link>

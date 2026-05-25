@@ -1,154 +1,93 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Award, Users, BookOpen, Globe, GraduationCap, Building2, ShieldCheck, Zap, Stethoscope, Library, Wifi, Bus, HeartPulse, Scale } from 'lucide-react';
-import adamBuilding from '../assets/gems/adam_building.png';
+import { ArrowRight, CheckCircle, GraduationCap, Building2, Library, Stethoscope, Globe, FlaskConical } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const University = () => {
   return (
     <>
       <Helmet>
-        <title>Adam University Kyrgyzstan MBBS 2025 | Gems Educare</title>
-        <meta name="description" content="Discover Adam University School of Medicine, Bishkek. World-class medical education, global recognition, and excellent facilities for Indian students." />
+        <title>Adam University School of Medicine | Bishkek | Gems Educare</title>
+        <meta name="description" content="Discover Adam University School of Medicine in Kyrgyzstan. Top-ranked university with students from 25+ countries and international clinical exposure." />
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-primary py-20 px-4 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-black mb-6">Adam University</h1>
-        <p className="text-xl text-primary font-bold uppercase tracking-widest">School of Medicine | Bishkek, Kyrgyzstan</p>
+      <section className="bg-gray-50 py-24 px-4 text-center border-b border-gray-100">
+        <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Established Excellence</p>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 font-playfair mb-6">Adam University</h1>
+        <p className="text-gray-500 text-lg font-playfair italic max-w-2xl mx-auto">School of Medicine</p>
       </section>
 
-      {/* Stats Bar */}
-      <section className="bg-white py-12 px-4 shadow-xl border-b border-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-black text-primary font-playfair">5000+</div>
-            <div className="text-sm font-bold text-text-secondary uppercase">Students Enrolled</div>
-          </div>
-          <div>
-            <div className="text-4xl font-black text-primary font-playfair">4.5+1 Year</div>
-            <div className="text-sm font-bold text-text-secondary uppercase">Course Duration</div>
-          </div>
-          <div>
-            <div className="text-4xl font-black text-primary font-playfair">7+</div>
-            <div className="text-sm font-bold text-text-secondary uppercase">Accreditations</div>
-          </div>
-          <div>
-            <div className="text-4xl font-black text-primary font-playfair">25+</div>
-            <div className="text-sm font-bold text-text-secondary uppercase">Countries</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Study at Adam */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-          <div className="flex-1 space-y-6">
-            <div className="bg-primary/5 border-l-4 border-primary p-4 text-primary font-bold text-lg inline-block border border-border">
-              Top Ranked Medical University in Kyrgyzstan
-            </div>
-            <h2 className="text-4xl font-bold text-primary">Why Study Adam University?</h2>
-            <p className="text-lg leading-relaxed text-text-secondary">
-              Adam University, established in 1994, is a prestigious institution offering an international curriculum and a comprehensive learning approach. It focuses on both academic and extracurricular development, ensuring students receive a well-rounded medical education.
+      {/* Overview */}
+      <section className="py-24 px-4 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair leading-tight">
+              A Legacy of <span className="italic font-normal text-primary">Medical Education</span>
+            </h2>
+            <p className="text-sm leading-relaxed text-gray-600">
+              Adam University isn't just a premier institution for medical and dental education — we are firm believers in a comprehensive approach to learning. Students flourish when presented with both academic challenges and extracurricular opportunities in a nurturing environment.
             </p>
-            <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-primary flex items-center gap-6 border border-border">
-              <Award className="text-primary" size={48} />
-              <div>
-                <h4 className="font-bold text-primary text-xl">International Exposure</h4>
-                <p className="text-sm text-text-secondary uppercase font-bold tracking-widest">Global Medical Standards</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex-1">
-            <img src={adamBuilding} alt="University Campus" className="rounded-3xl shadow-2xl border-8 border-white" />
-          </div>
-        </div>
-      </section>
-
-      {/* Facilities Section */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary">Medical Infrastructure & Facilities</h2>
-            <div className="w-24 h-1 bg-primary mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              { title: 'Simulation Center', icon: <HeartPulse size={32} /> },
-              { title: 'Anatomage Table', icon: <Scale size={32} /> },
-              { title: 'Medical Skills Labs', icon: <Stethoscope size={32} /> },
-              { title: 'Interactive Classrooms', icon: <Users size={32} /> },
-              { title: 'Advanced Research Center', icon: <Globe size={32} /> },
-              { title: 'Modern Library', icon: <Library size={32} /> },
-              { title: 'Computer Labs', icon: <Zap size={32} /> },
-              { title: 'VR/AR Learning', icon: <Globe size={32} /> },
-              { title: 'Reading Rooms', icon: <Library size={32} /> },
-              { title: 'Anatomy Museum', icon: <Building2 size={32} /> },
-            ].map((facility, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl shadow-md border border-border text-center space-y-4 hover:border-primary transition-colors">
-                <div className="w-16 h-16 bg-primary/5 rounded-full flex items-center justify-center mx-auto text-primary">
-                  {facility.icon}
+            <p className="text-sm leading-relaxed text-gray-600">
+              We occupy a leading position in national university rankings and are represented by students from more than <strong className="text-gray-900">25 different countries</strong>. Ranked among Top Medical Colleges in Kyrgyzstan.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+              {[
+                "Top-ranked university",
+                "Students from 25+ countries",
+                "International curriculum",
+                "Comprehensive learning approach",
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3">
+                  <CheckCircle className="text-primary/60 flex-shrink-0" size={18} />
+                  <span className="text-gray-900 text-sm font-semibold">{item}</span>
                 </div>
-                <h4 className="font-bold text-text-primary text-sm">{facility.title}</h4>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          <div className="aspect-square bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100">
+             <div className="text-gray-400 font-playfair italic text-xl">[ University Campus Image ]</div>
           </div>
         </div>
       </section>
 
-      {/* Research & Exposure */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-primary-dark p-12 rounded-[3rem] text-white space-y-6 relative border-t-8 border-primary shadow-xl">
-            <h3 className="text-2xl font-bold">Research Environment</h3>
-            <p className="opacity-80">
-              Adam University provides a robust research environment with advanced laboratories and centers dedicated to medical innovation and scientific inquiry.
-            </p>
-          </div>
-          <div className="bg-primary-dark p-12 rounded-[3rem] text-white space-y-6 relative border-t-8 border-primary shadow-xl">
-            <h3 className="text-2xl font-bold">International Exposure</h3>
-            <p className="opacity-80">
-              Students benefit from international faculty and a diverse student community from 25+ countries, preparing them for global medical careers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Accreditations */}
-      <section className="bg-white py-20 px-4">
+      {/* Facilities Grid */}
+      <section className="bg-gray-50 py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary uppercase tracking-widest">Recognitions & Accreditations</h2>
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">World's Most Advanced</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Medical Facilities in College</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "WHO", "FAIMER", "Ministry of Health", "Pakistan Medical Council", 
-              "Bangladesh Medical Council", "Nepal Medical Council", "IAAR", "NMC India"
-            ].map((body, idx) => (
-              <div key={idx} className="bg-white border-2 border-primary rounded-2xl p-8 flex items-center justify-center text-xl font-black text-primary hover:bg-primary hover:text-white transition-all cursor-default shadow-md">
-                {body}
+              { title: '3D Anatomage Table System', icon: <FlaskConical size={24} /> },
+              { title: 'Simulated Mannequin Stations', icon: <Stethoscope size={24} /> },
+              { title: 'Ultra Modern Library', icon: <Library size={24} /> },
+              { title: 'Team Learning Center (TLC)', icon: <Globe size={24} /> },
+              { title: 'Simulation Center', icon: <Building2 size={24} /> },
+              { title: 'Advanced Interactive Classrooms', icon: <GraduationCap size={24} /> },
+            ].map((facility, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 flex items-center gap-4 hover:border-primary transition-colors">
+                <div className="text-primary flex-shrink-0">{facility.icon}</div>
+                <h4 className="font-semibold text-gray-900 text-sm">{facility.title}</h4>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-primary py-20 px-4 text-white text-center shadow-2xl border-t-8 border-primary">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
-            <GraduationCap className="text-white" size={40} />
-          </div>
-          <h2 className="text-4xl font-bold">Start Your Journey at Adam University</h2>
-          <p className="text-xl leading-relaxed opacity-90 italic">
-            "Your medical career begins here. Get world-class education at an affordable cost."
-          </p>
-          <div className="pt-8">
-            <a
-              href="https://wa.me/919160404666"
-              className="bg-primary text-white px-10 py-4 rounded-md font-bold text-xl hover:scale-105 transition-transform inline-block shadow-lg"
+      {/* CTA */}
+      <section className="bg-white py-24 px-4 text-center border-t border-gray-100">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Begin Your Journey at Adam</h2>
+          <p className="text-gray-500">Contact our admissions team to learn more about the enrollment process.</p>
+          <div className="flex justify-center pt-4">
+            <Link
+              to="/admission"
+              className="bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide flex items-center gap-2 hover:bg-primary-dark transition-colors"
             >
-              Apply for Admission
-            </a>
+              View Admission Process <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -157,4 +96,3 @@ const University = () => {
 };
 
 export default University;
-

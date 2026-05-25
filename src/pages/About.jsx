@@ -12,18 +12,22 @@ const About = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-primary py-20 px-4 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-black mb-6">About Gems Educare</h1>
-        <p className="text-xl text-primary font-bold uppercase tracking-widest">Empowering Future Doctors</p>
+      <section className="bg-gray-50 py-24 px-4 text-center border-b border-gray-100">
+        <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Empowering Future Doctors</p>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 font-playfair mb-6">About Gems Educare</h1>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">Your trusted partner in navigating international medical education.</p>
       </section>
 
-      {/* Why Gems Educare */}
-      <section className="py-20 px-4 bg-white">
+      {/* WHY GEM EUDCARE */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center space-y-12">
-          <h2 className="text-4xl font-bold text-primary uppercase tracking-wider">WHY GEMS EDUCARE?</h2>
-          <div className="bg-white p-10 rounded-[3rem] border-t-8 border-primary relative shadow-2xl border border-border">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary text-white px-8 py-2 rounded-full font-black">OUR GOAL</div>
-            <p className="text-xl md:text-2xl leading-relaxed text-text-primary italic">
+          <div>
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">Why Gem Eudcare?</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Our Goal</h2>
+          </div>
+          <div className="bg-gray-50 p-12 rounded-2xl border border-gray-100 relative">
+            <QuoteIcon className="absolute top-8 left-8 text-primary/10 w-16 h-16" />
+            <p className="text-xl md:text-2xl leading-relaxed text-gray-700 italic font-playfair relative z-10">
               "Our goal is to empower every medical aspirant to become a doctor and to enable each and every student to get quality education services affordably, irrespective of caste, creed, religion, age, race, gender, and nationality but respective of equality, inclusion, and humanity."
             </p>
           </div>
@@ -31,49 +35,49 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-24 px-4 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary">Core Values</h2>
-            <div className="w-24 h-1 bg-primary mx-auto mt-4" />
+            <p className="text-primary font-bold tracking-[0.15em] text-[10px] uppercase mb-4">What We Stand For</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Core Values</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: 'TRUTHFULNESS',
-                desc: 'We believe in absolute transparency and honesty in all our dealings with students and parents.',
-                icon: <Shield className="text-primary" size={32} />
+                desc: 'Truth is the hallmark of all our values, principles, morals, and work ethics. We believe in absolute transparency and honesty in all our dealings.',
+                icon: <Shield className="text-primary" size={24} />
               },
               {
                 title: 'EQUITY',
-                desc: 'We provide equal opportunities and resources to every student, ensuring no one is left behind.',
-                icon: <Users className="text-primary" size={32} />
+                desc: 'We believe education and healthcare are for all. We provide equal opportunities and resources to every student, ensuring no one is left behind.',
+                icon: <Users className="text-primary" size={24} />
               },
               {
                 title: 'CHANGE',
-                desc: 'We embrace innovation and constant improvement in our educational services and support.',
-                icon: <Zap className="text-primary" size={32} />
+                desc: 'Change keeps us going, and good change is the focus of our innovation. We embrace constant improvement in our educational services.',
+                icon: <Zap className="text-primary" size={24} />
               },
               {
                 title: 'COMMITMENT',
-                desc: 'Our commitment to student success goes beyond admission; we support them throughout their 6-year journey.',
-                icon: <Heart className="text-primary" size={32} />
+                desc: 'When time goes hard, we go harder. Our commitment to student success goes beyond admission; we support them throughout their entire journey.',
+                icon: <Heart className="text-primary" size={24} />
               },
               {
                 title: 'SUPREMACY',
-                desc: 'We strive for excellence in everything we do, setting the highest standards for medical consultancy.',
-                icon: <Award className="text-primary" size={32} />
+                desc: 'We do the best we can and chase perfection to achieve excellence. We strive for the highest standards in medical consultancy services.',
+                icon: <Award className="text-primary" size={24} />
               },
               {
                 title: 'SUSTAINABILITY',
-                desc: 'We build long-term relationships and sustainable educational paths for the future of healthcare.',
-                icon: <Target className="text-primary" size={32} />
+                desc: 'We make sure to keep going economically, financially, environmentally, and socially. We build long-term relationships and sustainable paths.',
+                icon: <Target className="text-primary" size={24} />
               }
             ].map((value, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary flex flex-col items-center text-center space-y-4 border border-border">
-                <div className="bg-primary/5 p-4 rounded-full">{value.icon}</div>
-                <h3 className="text-xl font-black text-primary">{value.title}</h3>
-                <p className="text-text-secondary leading-relaxed">{value.desc}</p>
+              <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 flex flex-col items-start gap-4 hover:border-primary/30 transition-colors">
+                <div className="bg-primary/5 p-3 rounded-lg">{value.icon}</div>
+                <h3 className="text-sm font-bold text-gray-900 tracking-wide">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -81,52 +85,84 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 px-4 bg-white overflow-hidden relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-primary-dark p-12 rounded-[3rem] text-white space-y-6 relative border-t-8 border-primary shadow-xl">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary opacity-10 rounded-full translate-x-16 -translate-y-16" />
-            <div className="flex items-center gap-4">
-              <Target className="text-primary" size={40} />
-              <h2 className="text-3xl font-bold">Mission</h2>
-            </div>
-            <p className="text-lg leading-relaxed opacity-80">
-              Our mission is to provide world-class medical education that meets global standards and prepares students 
-              for successful medical careers worldwide. We are committed to fostering an environment of academic 
-              excellence, research, and professional growth.
-            </p>
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-playfair">Mission & Vision</h2>
           </div>
-          <div className="bg-primary-dark p-12 rounded-[3rem] text-white space-y-6 relative border-t-8 border-primary shadow-xl">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary opacity-10 rounded-full translate-x-16 -translate-y-16" />
-            <div className="flex items-center gap-4">
-              <Eye className="text-primary" size={40} />
-              <h2 className="text-3xl font-bold">Vision</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-gray-50 p-12 rounded-2xl border border-gray-100">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-primary/10 p-3 rounded-full text-primary">
+                  <Target size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 font-playfair">Our Mission</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                Adam University is dedicated to advancing healthcare through cutting-edge education, innovative research, and compassionate patient care. Our mission is to cultivate a diverse community of skilled healthcare professionals who excel in their respective fields, contributing to the well-being of individuals and communities worldwide.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                We strive to provide an exceptional and inclusive learning environment that fosters intellectual curiosity, critical thinking, and a commitment to lifelong learning. Our graduates will be empowered with the knowledge, skills, and ethical values necessary to navigate the evolving landscape of healthcare and make meaningful contributions to the advancement of medical science.
+              </p>
             </div>
-            <p className="text-lg leading-relaxed opacity-80">
-              Our vision is to be a globally recognized leader in medical education, producing highly competent and 
-              compassionate medical professionals who contribute to the health and well-being of the global community.
-            </p>
+            <div className="bg-gray-50 p-12 rounded-2xl border border-gray-100">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-primary/10 p-3 rounded-full text-primary">
+                  <Eye size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 font-playfair">Our Vision</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                Adam University envisions a future where healthcare is transformed by our graduates, who are at the forefront of medical innovation, research, and practice. We aspire to be a global leader in medical education, known for producing visionary healthcare professionals who drive positive change and address the most pressing health challenges of our time.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                Our vision encompasses a collaborative and interdisciplinary approach, where our students, faculty, and alumni work together to push the boundaries of medical knowledge. In realizing our vision, we are committed to creating a culture of excellence, diversity, and inclusivity — a beacon of innovation and compassion, influencing the future of healthcare on a global scale.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Logo Section */}
-      <section className="py-20 px-4 bg-white text-center space-y-8">
-        <img src={gemsLogo} alt="Gems Educare" className="h-24 mx-auto" />
-        <h2 className="text-4xl font-playfair font-black text-primary">Change Your Future</h2>
-        <div className="max-w-2xl mx-auto flex flex-wrap justify-center gap-6 pt-8">
-          <div className="flex items-center gap-2 font-bold text-text-primary">
-            <CheckCircle className="text-support" size={20} /> Registered Consultancy
-          </div>
-          <div className="flex items-center gap-2 font-bold text-text-primary">
-            <CheckCircle className="text-support" size={20} /> ISO 9001:2015 Certified
-          </div>
-          <div className="flex items-center gap-2 font-bold text-text-primary">
-            <CheckCircle className="text-support" size={20} /> Verified Adam University Partner
-          </div>
+      <section className="py-24 px-4 bg-gray-50 border-t border-gray-100 text-center space-y-8">
+        <img src={gemsLogo} alt="Gems Educare" className="h-16 mx-auto mb-8" />
+        <h2 className="text-3xl font-bold text-gray-900 font-playfair italic">Change Your Future</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed text-sm">
+          Adam University occupies a leading position in national university rankings and is represented by students from more than 25 different countries. Ranked among Top Medical Colleges in Kyrgyzstan.
+        </p>
+        <div className="max-w-3xl mx-auto flex flex-wrap justify-center gap-6 py-8">
+          {[
+            'Registered Consultancy',
+            'ISO 9001:2015 Certified',
+            'Verified Adam University Partner',
+            '5000+ Students Guided',
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-2 font-semibold text-gray-900 text-sm">
+              <CheckCircle className="text-primary/60" size={16} /> {item}
+            </div>
+          ))}
         </div>
+        <div className="pt-4">
+          <a
+            href="https://wa.me/919160404666"
+            className="inline-block bg-primary text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-primary-dark transition-colors"
+          >
+            Get Free Counselling Today
+          </a>
+        </div>
+        <p className="text-gray-500 text-xs mt-8">
+          2nd Floor, BLR Dream Heaven, 1-262/1, Poranki, Vijayawada, Andhra Pradesh 521137<br/>
+          <a href="http://www.gemseudtech.com" className="text-primary hover:underline">www.gemseudtech.com</a> | +91 91604 04666
+        </p>
       </section>
     </>
   );
 };
+
+const QuoteIcon = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+  </svg>
+);
 
 export default About;

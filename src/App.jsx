@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import MobileBottomBar from './components/MobileBottomBar';
 import ScrollToTop from './components/ScrollToTop';
+import WelcomeModal from './components/WelcomeModal';
 
 // Lazy load pages for performance
 import Home from './pages/Home';
@@ -41,6 +42,7 @@ function App() {
           <Footer />
           <WhatsAppButton />
           <MobileBottomBar />
+          <WelcomeModal />
         </div>
       </Router>
     </HelmetProvider>

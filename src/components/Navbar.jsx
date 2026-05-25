@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Phone, Globe, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import gemsLogo from '../assets/gems/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -18,77 +25,56 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full sticky top-0 z-[100]">
-      {/* Top Strip */}
-      <div className="bg-primary-dark h-8 flex items-center justify-between px-4 md:px-12 text-white text-[11px]">
-        <div className="flex items-center gap-4">
-          <a href="tel:+919160404666" className="flex items-center gap-1 hover:text-primary">
-            <Phone size={12} /> +91 91604 04666
-          </a>
-          <span className="hidden md:inline">|</span>
-          <a href="https://www.gemseudtech.com" className="hidden md:flex items-center gap-1 hover:text-primary">
-            <Globe size={12} /> www.gemseudtech.com
-          </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <Facebook size={14} className="cursor-pointer hover:text-primary" />
-          <Instagram size={14} className="cursor-pointer hover:text-primary" />
-          <Twitter size={14} className="cursor-pointer hover:text-primary" />
-          <Youtube size={14} className="cursor-pointer hover:text-primary" />
-        </div>
-      </div>
+    <nav className={`w-full sticky top-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'}`}>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
+        {/* Logo */}
+        <Link to="/" className="flex-shrink-0 relative z-20">
+          <img src={gemsLogo} alt="Gems Educare" className="h-12 md:h-16 w-auto" />
+        </Link>
 
-      {/* Main Nav */}
-      <div className="bg-primary shadow-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex-shrink-0">
-            <img src={gemsLogo} alt="Gems Educare" className="h-10 md:h-12 w-auto" />
-          </Link>
-
-          {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-all hover:text-primary ${
-                    isActive ? 'text-primary border-b-2 border-primary' : 'text-white'
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-            <Link
-              to="/contact"
-              className="bg-primary text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-primary-light transition-colors"
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.path}
+              className={({ isActive }) =>
+                `text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary ${
+                  isActive ? 'text-primary' : 'text-gray-800'
+                }`
+              }
             >
-              Apply Now
-            </Link>
-          </div>
-
-          {/* Mobile Toggle */}
-          <button
-            className="lg:hidden text-white p-2"
-            onClick={() => setIsOpen(!isOpen)}
+              {link.name}
+            </NavLink>
+          ))}
+          <a
+            href="tel:+919160404666"
+            className="flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded text-sm font-bold tracking-wide uppercase hover:bg-primary-dark transition-colors"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            <Phone size={16} /> Call Now
+          </a>
         </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="lg:hidden text-gray-800 p-2 relative z-20 focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-primary-dark z-[110] transform transition-transform duration-300 ${
+        className={`fixed inset-0 bg-white z-[110] transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
-        } lg:hidden flex flex-col items-center justify-center gap-8`}
+        } lg:hidden flex flex-col pt-24 px-6 gap-6 h-screen overflow-y-auto`}
       >
         <button
-          className="absolute top-6 right-6 text-white"
+          className="absolute top-6 right-6 text-gray-800 p-2 bg-gray-100 rounded-full"
           onClick={() => setIsOpen(false)}
         >
-          <X size={32} />
+          <X size={24} />
         </button>
         
         {navLinks.map((link) => (
@@ -97,8 +83,8 @@ const Navbar = () => {
             to={link.path}
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
-              `text-2xl font-playfair font-bold ${
-                isActive ? 'text-primary' : 'text-white'
+              `text-xl font-playfair font-bold border-b border-gray-100 pb-4 ${
+                isActive ? 'text-primary' : 'text-gray-800'
               }`
             }
           >
@@ -106,13 +92,15 @@ const Navbar = () => {
           </NavLink>
         ))}
         
-        <Link
-          to="/contact"
-          onClick={() => setIsOpen(false)}
-          className="bg-primary text-white px-10 py-4 rounded-md font-bold text-xl mt-4"
-        >
-          Apply Now
-        </Link>
+        <div className="pt-4 pb-12">
+          <a
+            href="tel:+919160404666"
+            className="w-full flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold uppercase tracking-wide"
+            onClick={() => setIsOpen(false)}
+          >
+            <Phone size={18} /> Call Now
+          </a>
+        </div>
       </div>
     </nav>
   );

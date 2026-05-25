@@ -1,93 +1,85 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, MessageSquare, ChevronRight } from 'lucide-react';
+import { Phone, MapPin, MessageSquare } from 'lucide-react';
 import gemsLogo from '../assets/gems/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="w-full">
-      {/* Top Section */}
-      <div className="bg-white py-16 px-4 md:px-12 border-t border-border">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Col 1 */}
-          <div className="space-y-6">
-            <img src={gemsLogo} alt="Gems Educare" className="h-16 w-auto" />
-            <p className="text-xl font-playfair font-bold text-primary italic">"Change Your Future"</p>
-            <div className="space-y-4 text-text-primary">
-              <div className="flex gap-3">
-                <MapPin className="text-primary flex-shrink-0" size={20} />
-                <p className="text-sm">
-                  2nd Floor, BLR Dream Heaven, 1-262/1, Poranki,<br />
-                  Vijayawada, Andhra Pradesh 521137
-                </p>
-              </div>
-              <div className="flex gap-3 items-center">
-                <Phone className="text-primary" size={20} />
-                <a href="tel:+919160404666" className="font-bold hover:text-primary transition-colors">+91 91604 04666</a>
-              </div>
+    <footer className="w-full bg-white border-t border-gray-100 pb-20 md:pb-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 grid grid-cols-1 md:grid-cols-12 gap-12">
+        {/* Col 1 */}
+        <div className="md:col-span-4 space-y-8">
+          <img src={gemsLogo} alt="Gems Educare" className="h-14 w-auto" />
+          <p className="text-gray-500 text-sm leading-relaxed">
+            Leading medical education consultancy guiding Indian students to a successful career at Adam University, Kyrgyzstan.
+          </p>
+          <div className="space-y-4">
+            <div className="flex items-start gap-3 text-gray-600">
+              <MapPin className="text-primary/60 mt-1 flex-shrink-0" size={18} />
+              <p className="text-sm">
+                2nd Floor, BLR Dream Heaven, 1-262/1,<br />
+                Poranki, Vijayawada, AP 521137
+              </p>
+            </div>
+            <div className="flex items-center gap-3 text-gray-600">
+              <Phone className="text-primary/60 flex-shrink-0" size={18} />
+              <a href="tel:+919160404666" className="text-sm font-semibold hover:text-primary transition-colors">+91 91604 04666</a>
             </div>
           </div>
+        </div>
 
-          {/* Col 2 */}
-          <div>
-            <h4 className="text-xl font-playfair font-bold text-primary mb-8 border-b-2 border-primary w-fit pb-1">Quick Links</h4>
-            <div className="grid grid-cols-1 gap-3">
-              {[
-                { name: 'Home', path: '/' },
-                { name: 'About Us', path: '/about' },
-                { name: 'Why Kyrgyzstan', path: '/kyrgyzstan' },
-                { name: 'Adam University', path: '/university' },
-                { name: 'Fee Structure', path: '/fees' },
-                { name: 'Admission Process', path: '/admission' },
-                { name: 'Hostel & Food', path: '/hostel-food' },
-                { name: 'Accreditations', path: '/accreditations' },
-                { name: 'Contact', path: '/contact' }
-              ].map((item) => (
-                <Link 
-                  key={item.name} 
-                  to={item.path}
-                  className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors group"
-                >
-                  <ChevronRight size={14} className="text-primary group-hover:translate-x-1 transition-transform" />
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+        {/* Col 2 */}
+        <div className="md:col-span-4 lg:col-span-3 lg:col-start-6">
+          <h4 className="text-gray-900 font-bold uppercase tracking-widest text-xs mb-8">Quick Links</h4>
+          <div className="flex flex-col gap-4">
+            {[
+              { name: 'Home', path: '/' },
+              { name: 'About Us', path: '/about' },
+              { name: 'Why Kyrgyzstan', path: '/kyrgyzstan' },
+              { name: 'Fee Structure', path: '/fees' },
+              { name: 'Accreditations', path: '/accreditations' },
+              { name: 'Contact', path: '/contact' }
+            ].map((item) => (
+              <Link 
+                key={item.name} 
+                to={item.path}
+                className="text-gray-500 text-sm hover:text-primary transition-colors w-fit"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
+        </div>
 
-          {/* Col 3 */}
-          <div>
-            <h4 className="text-xl font-playfair font-bold text-primary mb-8 border-b-2 border-primary w-fit pb-1">Free Counselling</h4>
-            <div className="space-y-4">
-              <a
-                href="https://wa.me/919160404666?text=Hi!%20I%20want%20to%20know%20about%20MBBS%20admission%20at%20Adam%20University%20Kyrgyzstan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-3 rounded-md font-bold hover:scale-105 transition-transform shadow-md"
-              >
-                <MessageSquare size={20} />
-                Chat on WhatsApp
-              </a>
-              <a
-                href="tel:+919160404666"
-                className="flex items-center justify-center gap-3 bg-primary text-white py-3 rounded-md font-bold hover:scale-105 transition-transform shadow-md"
-              >
-                <Phone size={20} />
-                Call +91 91604 04666
-              </a>
-            </div>
+        {/* Col 3 */}
+        <div className="md:col-span-4">
+          <h4 className="text-gray-900 font-bold uppercase tracking-widest text-xs mb-8">Free Counselling</h4>
+          <div className="space-y-4">
+            <a
+              href="https://wa.me/919160404666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-[#1ebe5d] transition-colors"
+            >
+              <MessageSquare size={18} />
+              Chat on WhatsApp
+            </a>
+            <a
+              href="tel:+919160404666"
+              className="flex items-center justify-center gap-3 border border-gray-200 text-gray-900 py-4 rounded text-sm font-bold uppercase tracking-wide hover:bg-gray-50 transition-colors"
+            >
+              <Phone size={18} />
+              Call Now
+            </a>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-primary-dark text-white py-8 px-4 text-center space-y-4 mb-16 md:mb-0">
-        <p className="text-primary font-medium">
-          WHO | ECFMG | NMC INDIA | 15+ INT'L COUNCILS
-        </p>
-        <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto text-sm opacity-80">
-          <p>© 2025 Gems Educare. All Rights Reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
+      <div className="border-t border-gray-100 bg-gray-50 py-8 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-gray-500">
+          <p>© {new Date().getFullYear()} Gems Educare. All Rights Reserved.</p>
+          <div className="flex gap-6">
             <Link to="/contact" className="hover:text-primary">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-primary">Terms & Conditions</Link>
           </div>
