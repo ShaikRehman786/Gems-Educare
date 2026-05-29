@@ -45,12 +45,12 @@ const Navbar = () => {
           ? 'bg-white/98 backdrop-blur-md shadow-sm'
           : 'bg-white/98 backdrop-blur-md'
       }`}>
-        <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-10 flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-10 flex items-center justify-between h-24 md:h-28 lg:h-32 relative">
           <Link to="/" className="flex-shrink-0 hover:opacity-90 transition-opacity group">
             <img
               src={gemLogo}
               alt="Gems Educare"
-              className="h-[60px] md:h-[75px] lg:h-[90px] xl:h-[100px] w-auto object-contain"
+              className="h-[80px] md:h-[100px] lg:h-[120px] xl:h-[135px] w-auto object-contain"
             />
           </Link>
 
@@ -98,7 +98,21 @@ const Navbar = () => {
         } lg:hidden flex flex-col`}
         style={{ transitionDuration: '0.35s' }}
       >
-        <div className="pt-[90px] flex-1 overflow-y-auto px-5 md:px-8">
+        <div className="flex items-center justify-between px-5 md:px-8 h-24 border-b border-border">
+          <img
+            src={gemLogo}
+            alt="Gems Educare"
+            className="h-[80px] w-auto object-contain"
+          />
+          <button
+            className="p-2.5 text-text-primary hover:bg-gray-100 rounded-xl transition-colors"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={22} />
+          </button>
+        </div>
+        <div className="flex-1 overflow-y-auto px-5 md:px-8 pt-4">
           <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <NavLink
