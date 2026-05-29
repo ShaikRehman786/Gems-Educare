@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { X, CheckCircle, ArrowLeft, Star, MessageSquare } from 'lucide-react';
 
 const reviews = [
@@ -74,11 +74,11 @@ const WelcomeModal = () => {
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(4px)' }}
+      style={{ backgroundColor: 'rgba(0, 27, 77, 0.6)', backdropFilter: 'blur(4px)' }}
       onClick={(e) => e.target === e.currentTarget && setIsOpen(false)}
     >
       <div
-        className="relative bg-white rounded-2xl shadow-xl border border-border w-[95vw] max-w-[420px] md:max-w-[600px] lg:max-w-[850px] max-h-[90vh] overflow-y-auto animate-modal-in"
+        className="relative bg-white rounded-2xl shadow-xl border border-border w-[95vw] max-w-[420px] md:max-w-[600px] lg:max-w-[850px] max-h-[90vh] overflow-y-auto"
         style={{ animation: 'modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both' }}
       >
         <button
@@ -93,9 +93,10 @@ const WelcomeModal = () => {
           <div className="p-6 md:p-8 lg:p-10">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair leading-tight">
-                MBBS at <span className="text-accent">Adam University</span>
+                MBBS at{' '}
+                <span className="text-accent">Adam University</span>
               </h2>
-              <div className="text-xl md:text-2xl font-bold text-primary mt-2">
+              <div className="text-xl md:text-2xl font-bold text-accent mt-2">
                 ₹16 Lakhs <span className="text-base font-normal text-text-secondary">Total Cost</span>
               </div>
             </div>
@@ -116,7 +117,7 @@ const WelcomeModal = () => {
                 'Pay Fee on Arrival',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-2 text-sm text-text-secondary">
-                  <CheckCircle size={16} className="text-secondary flex-shrink-0 mt-0.5" />
+                  <CheckCircle size={16} className="text-accent flex-shrink-0 mt-0.5" />
                   <span className="leading-snug">{item}</span>
                 </div>
               ))}
@@ -130,7 +131,7 @@ const WelcomeModal = () => {
               onTouchEnd={handleTouchEnd}
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="text-yellow-500 flex">
+                <div className="text-accent flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" />
                   ))}
@@ -148,7 +149,7 @@ const WelcomeModal = () => {
                     key={i}
                     onClick={() => setCurrentReview(i)}
                     className={`h-2 rounded-full transition-all cursor-pointer ${
-                      i === currentReview ? 'w-6 bg-primary' : 'w-2 bg-gray-300'
+                      i === currentReview ? 'w-6 bg-accent' : 'w-2 bg-gray-300'
                     }`}
                     aria-label={`Review ${i + 1}`}
                   />
@@ -172,7 +173,7 @@ const WelcomeModal = () => {
 
             <button
               onClick={() => setStep(2)}
-              className="w-full bg-primary text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-navy transition-all shadow-md"
+              className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-primary transition-all shadow-md"
             >
               GET FREE COUNSELLING
             </button>
@@ -180,7 +181,7 @@ const WelcomeModal = () => {
         )}
 
         {step === 2 && (
-          <div className="p-6 md:p-8 lg:p-10 animate-fade-in">
+          <div className="p-6 md:p-8 lg:p-10" style={{ animation: 'fadeIn 0.3s ease-out both' }}>
             <div className="flex items-center gap-4 mb-6">
               <button
                 onClick={handleBack}
@@ -204,7 +205,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -216,7 +217,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
                   placeholder="Enter your mobile number"
                 />
               </div>
@@ -227,7 +228,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.state}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary transition-colors appearance-none"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors appearance-none"
                 >
                   <option value="">Select your state</option>
                   <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -251,7 +252,7 @@ const WelcomeModal = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-navy transition-all shadow-md mt-2"
+                className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-primary transition-all shadow-md mt-2"
               >
                 GET FREE COUNSELLING
               </button>
@@ -263,7 +264,7 @@ const WelcomeModal = () => {
                 href="https://wa.me/919160404666"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary text-sm font-bold hover:underline"
+                className="inline-flex items-center gap-2 text-accent text-sm font-bold hover:underline"
               >
                 <MessageSquare size={16} /> Chat with us on WhatsApp
               </a>
@@ -280,9 +281,6 @@ const WelcomeModal = () => {
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.3s ease-out both;
         }
       `}</style>
     </div>

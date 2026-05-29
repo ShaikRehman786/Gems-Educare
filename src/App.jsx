@@ -1,9 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
 import MobileBottomBar from './components/MobileBottomBar';
 import ScrollToTop from './components/ScrollToTop';
 import WelcomeModal from './components/WelcomeModal';
@@ -40,7 +38,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          <WhatsAppButton />
           <MobileBottomBar />
           <WelcomeModal />
         </div>

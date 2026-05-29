@@ -1,17 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
-import gemsLogo from '../assets/gemsbr/3.png';
+import gemLogo from '../assets/gemsbr/3.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -25,84 +39,100 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`w-full sticky top-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm border-b border-border'}`}>
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20 md:h-24">
-        {/* Logo */}
-        <div className="flex items-center"><Link to="/" className="flex-shrink-0 relative z-20 hover:opacity-90 transition-opacity">
-          <img src={gemsLogo} alt="Gems Educare" className="h-14 sm:h-16 md:h-[72px] w-auto object-contain" />
-        </Link></div>
+    <>
+      <nav className={`w-full sticky top-0 z-[100] transition-all duration-500 ${
+        scrolled
+          ? 'bg-white/98 backdrop-blur-md shadow-sm'
+          : 'bg-white/98 backdrop-blur-md'
+      }`}>
+        <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-10 flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
+          <Link to="/" className="flex-shrink-0 hover:opacity-90 transition-opacity group">
+            <img
+              src={gemLogo}
+              alt="Gems Educare"
+              className="h-[60px] md:h-[75px] lg:h-[90px] xl:h-[100px] w-auto object-contain"
+            />
+          </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) =>
-                `text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary ${
-                  isActive ? 'text-primary' : 'text-text-primary'
-                }`
-              }
+          <div className="hidden lg:flex items-center gap-0 xl:gap-0.5 absolute left-1/2 -translate-x-1/2">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) =>
+                  `px-2 xl:px-3 2xl:px-4 py-2 text-xs xl:text-sm font-semibold tracking-wide transition-all duration-200 rounded-lg xl:rounded-xl ${
+                    isActive
+                      ? 'text-accent bg-accent/5'
+                      : 'text-text-primary hover:text-accent hover:bg-gray-50'
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-1.5 md:gap-2">
+            <div className="hidden lg:flex items-center">
+              <a
+                href="https://wa.me/919160404666"
+                className="bg-accent text-white px-3.5 xl:px-5 py-2.5 xl:py-3 rounded-xl text-xs xl:text-sm font-bold tracking-wide uppercase hover:bg-primary transition-all duration-300 flex items-center gap-1.5 xl:gap-2 shadow-sm hover:shadow-md whitespace-nowrap"
+              >
+                <Phone size={12} className="xl:hidden" /><Phone size={14} className="hidden xl:block" /><span className="hidden 2xl:inline">Free </span>Counselling
+              </a>
+            </div>
+            <button
+              className="lg:hidden text-text-primary p-2 focus:outline-none hover:bg-gray-100 rounded-xl transition-colors"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
-              {link.name}
-            </NavLink>
-          ))}
-          <a
-            href="tel:+919160404666"
-            className="flex items-center gap-2 bg-primary text-white rounded-xl px-6 py-2.5 rounded text-sm font-bold tracking-wide uppercase hover:bg-primary-dark transition-all transition-colors"
-          >
-            <Phone size={16} /> Call Now
-          </a>
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
+      </nav>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden text-text-primary p-2 relative z-20 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-white z-[110] transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } lg:hidden flex flex-col pt-24 px-6 gap-6 h-screen overflow-y-auto`}
+        className={`fixed inset-0 bg-white z-[9999] transform transition-all duration-400 ${
+          isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+        } lg:hidden flex flex-col`}
+        style={{ transitionDuration: '0.35s' }}
       >
-        <button
-          className="absolute top-6 right-6 text-text-primary p-2 bg-section rounded-full"
-          onClick={() => setIsOpen(false)}
-        >
-          <X size={24} />
-        </button>
-        
-        {navLinks.map((link) => (
-          <NavLink
-            key={link.name}
-            to={link.path}
-            onClick={() => setIsOpen(false)}
-            className={({ isActive }) =>
-              `text-xl font-playfair font-bold border-b border-border pb-4 ${
-                isActive ? 'text-primary' : 'text-text-primary'
-              }`
-            }
-          >
-            {link.name}
-          </NavLink>
-        ))}
-        
-        <div className="pt-4 pb-12">
+        <div className="pt-[90px] flex-1 overflow-y-auto px-5 md:px-8">
+          <div className="flex flex-col gap-1.5">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 text-lg font-semibold px-5 py-4 rounded-2xl transition-all ${
+                    isActive
+                      ? 'text-accent bg-accent/5 border-l-[3px] border-accent'
+                      : 'text-text-primary hover:bg-gray-50 hover:text-accent border-l-[3px] border-transparent'
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+
+        <div className="px-5 md:px-8 py-6 border-t border-border bg-gray-50/50 space-y-3">
           <a
-            href="tel:+919160404666"
-            className="w-full flex justify-center items-center gap-2 bg-primary text-white rounded-xl px-8 py-4 rounded font-bold uppercase tracking-wide"
+            href="https://wa.me/919160404666"
+            className="w-full flex justify-center items-center gap-3 bg-accent text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-wide text-sm hover:bg-primary transition-all shadow-sm"
             onClick={() => setIsOpen(false)}
           >
-            <Phone size={18} /> Call Now
+            <Phone size={18} /> Get Free Counselling
           </a>
+          <p className="text-center text-xs text-text-secondary">
+            Call: +91 91604 04666
+          </p>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

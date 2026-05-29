@@ -36,7 +36,7 @@ export default {
 
         text: {
           primary: "#111111",
-          secondary: "#555555",
+          secondary: "#4B5563",
         },
       },
 

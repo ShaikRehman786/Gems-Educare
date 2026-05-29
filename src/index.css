@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   html, body {
     @apply font-inter bg-white text-text-primary overflow-x-hidden leading-relaxed;
   }
@@ -14,30 +19,166 @@
   p {
     @apply text-text-primary;
   }
+  ::selection {
+    background-color: #00AEEF;
+    color: #ffffff;
+  }
+  *, *::before, *::after {
+    @apply border-border;
+  }
 }
 
-/* Marquee animation for accreditations ticker */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-navy transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all duration-300;
+  }
+  .btn-accent {
+    @apply bg-accent text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  .btn-white {
+    @apply bg-white text-primary px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent hover:text-white transition-all duration-300 shadow-sm;
+  }
+  .btn-ghost {
+    @apply border-2 border-white/30 text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-white/10 transition-all duration-300;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 px-4;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+  .section-subtitle {
+    @apply text-accent font-bold tracking-[0.2em] text-[10px] uppercase mb-4 inline-block;
+  }
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+  .leading-trim {
+    text-rendering: optimizeLegibility;
+  }
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 30s linear infinite;
   display: inline-flex;
 }
 
-.animate-pulse-slow {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out both;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes accordion-open {
+  from { height: 0; opacity: 0; }
+  to { height: var(--accordion-height); opacity: 1; }
+}
+
+@keyframes accordion-close {
+  from { height: var(--accordion-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+@keyframes countIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-count-in {
+  animation: countIn 0.4s ease-out both;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
-  50% {
-    opacity: .8;
-    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .overflow-x-mobile {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .overflow-x-mobile > * {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-balance {
+    text-wrap: pretty;
   }
 }
