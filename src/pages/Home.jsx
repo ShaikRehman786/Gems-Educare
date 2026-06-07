@@ -40,7 +40,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start lg:items-end w-full">
             <div className="lg:col-span-7 xl:col-span-6 space-y-7 md:space-y-8 max-w-[600px]">
               <RevealOnScroll>
-                <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 md:px-5 py-2">
+                <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 md:px-5 py-2 mt-5 md:mt-0">
                   <BadgeCheck size={14} className="text-accent flex-shrink-0" />
                   <span className="text-[11px] md:text-xs font-semibold text-white/90 tracking-wider uppercase">
                     WHO & NMC Approved | 15+ Years Trust

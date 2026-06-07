@@ -17,7 +17,7 @@ const Footer = () => {
               <img
                 src={gemLogo}
                 alt="Gems Educare"
-                className="h-[55px] md:h-[65px] lg:h-[75px] w-auto object-contain"
+                className="h-[95px] md:h-20 lg:h-24 w-auto object-contain"
               />
             </Link>
             <p className="text-white/45 text-sm leading-relaxed max-w-sm">

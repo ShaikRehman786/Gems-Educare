@@ -50,7 +50,7 @@ const Navbar = () => {
             <img
               src={gemLogo}
               alt="Gems Educare"
-              className="h-[55px] md:h-[65px] lg:h-[75px] w-auto object-contain"
+              className="h-[85px] md:h-20 lg:h-24 w-auto object-contain"
             />
           </Link>
 
@@ -102,7 +102,7 @@ const Navbar = () => {
           <img
             src={gemLogo}
             alt="Gems Educare"
-             className="h-[55px] md:h-[65px] w-auto object-contain"
+             className="h-[85px] md:h-20 w-auto object-contain"
           />
           <button
             className="p-2.5 text-text-primary hover:bg-gray-100 rounded-xl transition-colors"
