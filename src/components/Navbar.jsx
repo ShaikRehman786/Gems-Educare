@@ -50,7 +50,7 @@ const Navbar = () => {
             <img
               src={gemLogo}
               alt="Gems Educare"
-              className="h-[80px] md:h-[100px] lg:h-[120px] xl:h-[135px] w-auto object-contain"
+              className="h-[55px] md:h-[65px] lg:h-[75px] w-auto object-contain"
             />
           </Link>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center">
               <a
                 href="https://wa.me/919160404666"
-                className="bg-accent text-white px-3.5 xl:px-5 py-2.5 xl:py-3 rounded-xl text-xs xl:text-sm font-bold tracking-wide uppercase hover:bg-primary transition-all duration-300 flex items-center gap-1.5 xl:gap-2 shadow-sm hover:shadow-md whitespace-nowrap"
+                className="bg-accent text-white px-3.5 xl:px-5 py-2.5 xl:py-3 rounded-xl text-xs xl:text-sm font-bold tracking-wide uppercase hover:bg-accent-hover transition-all duration-300 flex items-center gap-1.5 xl:gap-2 shadow-sm hover:shadow-md whitespace-nowrap"
               >
                 <Phone size={12} className="xl:hidden" /><Phone size={14} className="hidden xl:block" /><span className="hidden 2xl:inline">Free </span>Counselling
               </a>
@@ -102,7 +102,7 @@ const Navbar = () => {
           <img
             src={gemLogo}
             alt="Gems Educare"
-            className="h-[80px] w-auto object-contain"
+             className="h-[55px] md:h-[65px] w-auto object-contain"
           />
           <button
             className="p-2.5 text-text-primary hover:bg-gray-100 rounded-xl transition-colors"
@@ -136,7 +136,7 @@ const Navbar = () => {
         <div className="px-5 md:px-8 py-6 border-t border-border bg-gray-50/50 space-y-3">
           <a
             href="https://wa.me/919160404666"
-            className="w-full flex justify-center items-center gap-3 bg-accent text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-wide text-sm hover:bg-primary transition-all shadow-sm"
+            className="w-full flex justify-center items-center gap-3 bg-accent text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-wide text-sm hover:bg-accent-hover transition-all shadow-sm"
             onClick={() => setIsOpen(false)}
           >
             <Phone size={18} /> Get Free Counselling

@@ -63,7 +63,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all"
+                      className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all"
                       placeholder="Enter your name"
                     />
                   </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all"
+                      className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all"
                       placeholder="Enter phone number"
                     />
                   </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all"
+                    className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -99,13 +99,13 @@ const Contact = () => {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all resize-none"
+                    className="w-full bg-section border border-border rounded-xl px-5 py-4 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all resize-none"
                     placeholder="How can we help you?"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-accent text-white rounded-xl py-4 text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="w-full bg-accent text-white rounded-xl py-4 text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-accent-hover transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   Submit Inquiry <Send size={18} />
                 </button>

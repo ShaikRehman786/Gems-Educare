@@ -20,7 +20,7 @@
     @apply text-text-primary;
   }
   ::selection {
-    background-color: #00AEEF;
+    background-color: #FF6B35;
     color: #ffffff;
   }
   *, *::before, *::after {
@@ -30,13 +30,13 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-navy transition-all duration-300 shadow-sm hover:shadow-md;
+    @apply bg-primary text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary-dark transition-all duration-300 shadow-sm hover:shadow-md;
   }
   .btn-outline {
     @apply border-2 border-primary text-primary px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all duration-300;
   }
   .btn-accent {
-    @apply bg-accent text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md;
+    @apply bg-accent text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent-hover transition-all duration-300 shadow-sm hover:shadow-md;
   }
   .btn-white {
     @apply bg-white text-primary px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent hover:text-white transition-all duration-300 shadow-sm;

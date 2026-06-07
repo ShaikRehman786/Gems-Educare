@@ -156,7 +156,7 @@ const Home = () => {
                 </div>
               </RevealOnScroll>
               <RevealOnScroll delay={0.15}>
-                <Link to="/university" className="inline-flex items-center gap-2.5 bg-accent text-white px-7 py-3.5 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-primary transition-all duration-300 shadow-sm">
+                <Link to="/university" className="inline-flex items-center gap-2.5 bg-accent text-white px-7 py-3.5 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-accent-hover transition-all duration-300 shadow-sm">
                   Explore University <ArrowRight size={16} />
                 </Link>
               </RevealOnScroll>
@@ -290,7 +290,7 @@ const Home = () => {
       {/* SECTION 10: FINAL CTA */}
       <section className="relative py-24 md:py-36 px-5 md:px-8 lg:px-10 overflow-hidden bg-navy">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-navy to-navy" />
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 30% 20%, rgba(0, 174, 239, 0.4) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(0, 51, 153, 0.3) 0%, transparent 50%)' }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 30% 20%, rgba(255, 107, 53, 0.4) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(107, 63, 160, 0.3) 0%, transparent 50%)' }} />
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-10" style={{ filter: 'brightness(0.3)' }}>
           <source src="https://cdn.pixabay.com/video/2021/04/11/70487-539787137_large.mp4" type="video/mp4" />
         </video>

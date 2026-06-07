@@ -74,7 +74,7 @@ const WelcomeModal = () => {
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-      style={{ backgroundColor: 'rgba(0, 27, 77, 0.6)', backdropFilter: 'blur(4px)' }}
+      style={{ backgroundColor: 'rgba(45, 27, 69, 0.6)', backdropFilter: 'blur(4px)' }}
       onClick={(e) => e.target === e.currentTarget && setIsOpen(false)}
     >
       <div
@@ -173,7 +173,7 @@ const WelcomeModal = () => {
 
             <button
               onClick={() => setStep(2)}
-              className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-primary transition-all shadow-md"
+              className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-accent-hover transition-all shadow-md"
             >
               GET FREE COUNSELLING
             </button>
@@ -205,7 +205,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -217,7 +217,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all"
                   placeholder="Enter your mobile number"
                 />
               </div>
@@ -228,7 +228,7 @@ const WelcomeModal = () => {
                   required
                   value={formData.state}
                   onChange={handleChange}
-                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-accent transition-colors appearance-none"
+                  className="w-full bg-gray-50 border border-border rounded-lg px-4 py-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all appearance-none"
                 >
                   <option value="">Select your state</option>
                   <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -252,7 +252,7 @@ const WelcomeModal = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-primary transition-all shadow-md mt-2"
+                className="w-full bg-accent text-white py-4 rounded-xl text-sm font-bold uppercase tracking-wide hover:bg-accent-hover transition-all shadow-md mt-2"
               >
                 GET FREE COUNSELLING
               </button>

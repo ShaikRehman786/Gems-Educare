@@ -192,8 +192,8 @@ const About = () => {
           <SectionHeading subtitle="Start Your Journey" title="Ready to Begin?" description="Take the first step towards your global medical career. Our expert counselors are here to guide you." center />
           <RevealOnScroll>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="https://wa.me/919160404666" className="bg-accent text-white px-10 py-5 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300 shadow-lg">Get Free Counselling</a>
-              <Link to="/contact" className="border-2 border-primary text-primary px-10 py-5 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all duration-300">Contact Us</Link>
+              <a href="https://wa.me/919160404666" className="bg-accent text-white px-10 py-5 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent-hover transition-all duration-300 shadow-lg">Get Free Counselling</a>
+              <Link to="/contact" className="border-2 border-primary text-primary px-10 py-5 rounded-xl text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-primary-dark hover:text-white transition-all duration-300">Contact Us</Link>
             </div>
           </RevealOnScroll>
         </div>

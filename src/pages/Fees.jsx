@@ -197,7 +197,7 @@ const Fees = () => {
               </div>
               <a
                 href="https://wa.me/919160404666?text=I%20want%20to%20know%20about%20Education%20Loan%20for%20MBBS"
-                className="bg-accent text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-primary transition-all duration-300 inline-flex items-center gap-2 flex-shrink-0 shadow-sm whitespace-nowrap"
+                className="bg-accent text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-accent-hover transition-all duration-300 inline-flex items-center gap-2 flex-shrink-0 shadow-sm whitespace-nowrap"
               >
                 Get Loan Assistance <ArrowRight size={15} />
               </a>
